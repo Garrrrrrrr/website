@@ -44,9 +44,16 @@ const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
 const messageInput = document.getElementById('message');
 
-// Handle form submission
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
+// Wait for DOM to be ready, then attach event listener
+document.addEventListener('DOMContentLoaded', () => {
+  if (!form) {
+    console.error('Form not found');
+    return;
+  }
+
+  // Handle form submission
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
   // Check rate limit
   const rateLimitCheck = isRateLimited();
@@ -76,7 +83,7 @@ form.addEventListener('submit', async (e) => {
         from_name: nameInput.value,
         from_email: emailInput.value,
         message: messageInput.value,
-        to_email: 'g.tse8888@gmail.com' // Your receiving email address
+        to_email: 'g.tse8888@gmail.com'
       }
     );
 
@@ -92,4 +99,5 @@ form.addEventListener('submit', async (e) => {
     button.textContent = originalText;
     button.disabled = false;
   }
+});
 });
