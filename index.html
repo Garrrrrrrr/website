@@ -113,24 +113,23 @@
           If you have any questions or would like to work together, feel free to reach out to me! I am always open to new opportunities and collaborations.
         </div>
 
-        <form>
+        <form action="https://formsubmit.co/g.tse8888@gmail.com" method="POST">
           <label for="name">Name</label>
-          <input type="text" id="name">
+          <input type="text" id="name" name="name" required>
 
           <label for="email">Email</label>
-          <input type="email" id="email">
+          <input type="email" id="email" name="email" required>
 
           <label for="message">Message</label>
-          <textarea id="message" cols="30" rows="10"></textarea>
+          <textarea id="message" name="message" cols="30" rows="10" required></textarea>
 
           <button type="submit">Send Message</button>
+          <input type="hidden" name="_captcha" value="false">
         </form>
       </div>
     </section>
   </main>
 
-  <!-- EmailJS Script -->
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/index.min.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
 </html>

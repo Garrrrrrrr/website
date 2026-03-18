@@ -36,87 +36,37 @@ function recordSubmission() {
   localStorage.setItem('formSubmissions', JSON.stringify(submissions));
 }
 
-// Wait for DOM and EmailJS to be ready
-function initializeForm() {
-  // Check if EmailJS is loaded
-  if (typeof emailjs === 'undefined') {
-    console.log('Waiting for EmailJS to load...');
-    setTimeout(initializeForm, 100);
-    return;
-  }
-
-  console.log('EmailJS loaded, initializing...');
-
-  // Initialize EmailJS
-  emailjs.init('ENgU6BiCfyKVg6j6d');
-  console.log('EmailJS initialized successfully!');
-
-  // Get form elements
+// Handle form submission with rate limiting
+document.addEventListener('DOMContentLoaded', () => {
   const form = document.querySelector('form');
-  const nameInput = document.getElementById('name');
-  const emailInput = document.getElementById('email');
-  const messageInput = document.getElementById('message');
-
+  
   if (!form) {
     console.error('Form not found');
     return;
   }
 
-  // Handle form submission
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-
+  form.addEventListener('submit', (e) => {
     // Check rate limit
     const rateLimitCheck = isRateLimited();
     if (rateLimitCheck.limited) {
+      e.preventDefault();
       alert(`Too many submissions. Please try again in ${rateLimitCheck.timeUntilReset} seconds.`);
       return;
     }
 
-    // Validate form inputs
-    if (!nameInput.value.trim() || !emailInput.value.trim() || !messageInput.value.trim()) {
-      alert('Please fill in all fields');
-      return;
-    }
-
+    // Record submission if not rate limited
+    recordSubmission();
+    
     // Show loading state
     const button = form.querySelector('button');
     const originalText = button.textContent;
     button.textContent = 'Sending...';
     button.disabled = true;
 
-    try {
-      // Send email using EmailJS
-      console.log('Attempting to send email...');
-      
-      const response = await emailjs.send(
-        'service_d8hif8b', 
-        'template_a3wnu0b', 
-        {
-          from_name: nameInput.value,
-          from_email: emailInput.value,
-          message: messageInput.value,
-          to_email: 'g.tse8888@gmail.com'
-        }
-      );
-
-      console.log('Email sent successfully!', response);
-      recordSubmission();
-      alert('Message sent successfully!');
-      form.reset();
+    // Reset button after delay
+    setTimeout(() => {
       button.textContent = originalText;
       button.disabled = false;
-    } catch (error) {
-      console.error('Error sending email:', error);
-      if (error.text) {
-        console.error('Error details:', error.text);
-      }
-      alert('Failed to send message. Check the browser console for details.');
-      button.textContent = originalText;
-      button.disabled = false;
-    }
+    }, 2000);
   });
-}
-
-// Start initialization when DOM is ready
-document.addEventListener('DOMContentLoaded', initializeForm);
+});
