@@ -37,12 +37,15 @@ function recordSubmission() {
 }
 
 // Wait for DOM and EmailJS to be ready
-document.addEventListener('DOMContentLoaded', () => {
+function initializeForm() {
   // Check if EmailJS is loaded
   if (typeof emailjs === 'undefined') {
-    console.error('EmailJS library not loaded. Check that the CDN script is included.');
+    console.log('Waiting for EmailJS to load...');
+    setTimeout(initializeForm, 100);
     return;
   }
+
+  console.log('EmailJS loaded, initializing...');
 
   // Initialize EmailJS
   emailjs.init('ENgU6BiCfyKVg6j6d');
@@ -113,4 +116,7 @@ document.addEventListener('DOMContentLoaded', () => {
       button.disabled = false;
     }
   });
-});
+}
+
+// Start initialization when DOM is ready
+document.addEventListener('DOMContentLoaded', initializeForm);
