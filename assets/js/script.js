@@ -36,17 +36,23 @@ function recordSubmission() {
   localStorage.setItem('formSubmissions', JSON.stringify(submissions));
 }
 
-// Get form elements
-const form = document.querySelector('form');
-const nameInput = document.getElementById('name');
-const emailInput = document.getElementById('email');
-const messageInput = document.getElementById('message');
-
-// Wait for DOM to be ready, then attach event listener
+// Wait for DOM and EmailJS to be ready
 document.addEventListener('DOMContentLoaded', () => {
-  // Initialize EmailJS after DOM is loaded
+  // Check if EmailJS is loaded
+  if (typeof emailjs === 'undefined') {
+    console.error('EmailJS library not loaded. Check that the CDN script is included.');
+    return;
+  }
+
+  // Initialize EmailJS
   emailjs.init('ENgU6BiCfyKVg6j6d');
-  console.log('EmailJS initialized with public key: ENgU6BiCfyKVg6j6d');
+  console.log('EmailJS initialized successfully!');
+
+  // Get form elements
+  const form = document.querySelector('form');
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+  const messageInput = document.getElementById('message');
 
   if (!form) {
     console.error('Form not found');
@@ -57,62 +63,54 @@ document.addEventListener('DOMContentLoaded', () => {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-  // Check rate limit
-  const rateLimitCheck = isRateLimited();
-  if (rateLimitCheck.limited) {
-    alert(`Too many submissions. Please try again in ${rateLimitCheck.timeUntilReset} seconds.`);
-    return;
-  }
+    // Check rate limit
+    const rateLimitCheck = isRateLimited();
+    if (rateLimitCheck.limited) {
+      alert(`Too many submissions. Please try again in ${rateLimitCheck.timeUntilReset} seconds.`);
+      return;
+    }
 
-  // Validate form inputs
-  if (!nameInput.value.trim() || !emailInput.value.trim() || !messageInput.value.trim()) {
-    alert('Please fill in all fields');
-    return;
-  }
+    // Validate form inputs
+    if (!nameInput.value.trim() || !emailInput.value.trim() || !messageInput.value.trim()) {
+      alert('Please fill in all fields');
+      return;
+    }
 
-  // Show loading state
-  const button = form.querySelector('button');
-  const originalText = button.textContent;
-  button.textContent = 'Sending...';
-  button.disabled = true;
+    // Show loading state
+    const button = form.querySelector('button');
+    const originalText = button.textContent;
+    button.textContent = 'Sending...';
+    button.disabled = true;
 
-  try {
-    // Send email using EmailJS
-    console.log('Attempting to send email with:');
-    console.log('Service ID: service_d8hif8b');
-    console.log('Template ID: template_a3wnu0b');
-    console.log('Data:', {
-      from_name: nameInput.value,
-      from_email: emailInput.value,
-      message: messageInput.value,
-      to_email: 'g.tse8888@gmail.com'
-    });
+    try {
+      // Send email using EmailJS
+      console.log('Attempting to send email...');
+      
+      const response = await emailjs.send(
+        'service_d8hif8b', 
+        'template_a3wnu0b', 
+        {
+          from_name: nameInput.value,
+          from_email: emailInput.value,
+          message: messageInput.value,
+          to_email: 'g.tse8888@gmail.com'
+        }
+      );
 
-    const response = await emailjs.send(
-      'service_d8hif8b', 
-      'template_a3wnu0b', 
-      {
-        from_name: nameInput.value,
-        from_email: emailInput.value,
-        message: messageInput.value,
-        to_email: 'g.tse8888@gmail.com'
+      console.log('Email sent successfully!', response);
+      recordSubmission();
+      alert('Message sent successfully!');
+      form.reset();
+      button.textContent = originalText;
+      button.disabled = false;
+    } catch (error) {
+      console.error('Error sending email:', error);
+      if (error.text) {
+        console.error('Error details:', error.text);
       }
-    );
-
-    console.log('Email sent successfully!', response);
-    // Success - record submission before resetting
-    recordSubmission();
-    alert('Message sent successfully!');
-    form.reset();
-    button.textContent = originalText;
-    button.disabled = false;
-  } catch (error) {
-    console.error('Error sending email:', error);
-    console.error('Error code:', error.status);
-    console.error('Error text:', error.text);
-    alert('Failed to send message. Check the browser console for details.');
-    button.textContent = originalText;
-    button.disabled = false;
-  }
-});
+      alert('Failed to send message. Check the browser console for details.');
+      button.textContent = originalText;
+      button.disabled = false;
+    }
+  });
 });
