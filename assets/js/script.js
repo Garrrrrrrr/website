@@ -38,14 +38,14 @@ function recordSubmission() {
 
 // Handle form submission with rate limiting
 document.addEventListener('DOMContentLoaded', () => {
-  const form = document.querySelector('form');
+  const form = document.querySelector('#contactForm');
   
   if (!form) {
     console.error('Form not found');
     return;
   }
 
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     // Check rate limit
@@ -59,8 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
     const messageInput = document.getElementById('message');
-    const button = form.querySelector('button');
-    const originalText = button.textContent;
 
     // Validate form inputs
     if (!nameInput.value.trim() || !emailInput.value.trim() || !messageInput.value.trim()) {
@@ -69,33 +67,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Show loading state
+    const button = form.querySelector('button');
+    const originalText = button.textContent;
     button.textContent = 'Sending...';
     button.disabled = true;
 
-    try {
-      // Send form data to FormSubmit in background
-      const formData = new FormData(form);
-      
-      const response = await fetch('https://formsubmit.co/g.tse8888@gmail.com', {
-        method: 'POST',
-        body: formData
-      });
+    // Create form data
+    const formData = new FormData();
+    formData.append('name', nameInput.value);
+    formData.append('email', emailInput.value);
+    formData.append('message', messageInput.value);
 
+    // Submit to Formspree
+    fetch('https://formspree.io/f/xqeywjbo', {
+      method: 'POST',
+      body: formData
+    })
+    .then((response) => {
       if (response.ok) {
         console.log('Email sent successfully!');
         recordSubmission();
         alert('Message sent successfully!');
         form.reset();
-        button.textContent = originalText;
-        button.disabled = false;
       } else {
-        throw new Error('Form submission failed');
+        throw new Error('Failed to send message');
       }
-    } catch (error) {
-      console.error('Error sending message:', error);
+      button.textContent = originalText;
+      button.disabled = false;
+    })
+    .catch((error) => {
+      console.error('Error:', error);
       alert('Failed to send message. Please try again later.');
       button.textContent = originalText;
       button.disabled = false;
-    }
+    });
   });
 });
