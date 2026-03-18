@@ -1,6 +1,4 @@
 
-emailjs.init('ENgU6BiCfyKVg6j6d'); 
-
 // Rate limiting constants
 const RATE_LIMIT = {
   maxSubmissions: 2,
@@ -46,6 +44,10 @@ const messageInput = document.getElementById('message');
 
 // Wait for DOM to be ready, then attach event listener
 document.addEventListener('DOMContentLoaded', () => {
+  // Initialize EmailJS after DOM is loaded
+  emailjs.init('ENgU6BiCfyKVg6j6d');
+  console.log('EmailJS initialized with public key: ENgU6BiCfyKVg6j6d');
+
   if (!form) {
     console.error('Form not found');
     return;
@@ -76,6 +78,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
   try {
     // Send email using EmailJS
+    console.log('Attempting to send email with:');
+    console.log('Service ID: service_d8hif8b');
+    console.log('Template ID: template_a3wnu0b');
+    console.log('Data:', {
+      from_name: nameInput.value,
+      from_email: emailInput.value,
+      message: messageInput.value,
+      to_email: 'g.tse8888@gmail.com'
+    });
+
     const response = await emailjs.send(
       'service_d8hif8b', 
       'template_a3wnu0b', 
@@ -87,6 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     );
 
+    console.log('Email sent successfully!', response);
     // Success - record submission before resetting
     recordSubmission();
     alert('Message sent successfully!');
@@ -95,7 +108,9 @@ document.addEventListener('DOMContentLoaded', () => {
     button.disabled = false;
   } catch (error) {
     console.error('Error sending email:', error);
-    alert('Failed to send message. Please try again later.');
+    console.error('Error code:', error.status);
+    console.error('Error text:', error.text);
+    alert('Failed to send message. Check the browser console for details.');
     button.textContent = originalText;
     button.disabled = false;
   }
