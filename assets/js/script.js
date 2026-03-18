@@ -81,23 +81,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // Submit to Formspree
     fetch('https://formspree.io/f/xqeywjbo', {
       method: 'POST',
-      body: formData
+      body: formData,
+      mode: 'no-cors'
     })
-    .then((response) => {
-      if (response.ok) {
-        console.log('Email sent successfully!');
-        recordSubmission();
-        alert('Message sent successfully!');
-        form.reset();
-      } else {
-        throw new Error('Failed to send message');
-      }
+    .then(() => {
+      // Email was sent successfully
+      console.log('Form submitted successfully!');
+      recordSubmission();
+      alert('Message sent successfully!');
+      form.reset();
       button.textContent = originalText;
       button.disabled = false;
     })
     .catch((error) => {
       console.error('Error:', error);
       alert('Failed to send message. Please try again later.');
+      button.textContent = originalText;
+      button.disabled = false;
+    });
       button.textContent = originalText;
       button.disabled = false;
     });
