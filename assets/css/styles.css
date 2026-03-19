@@ -109,6 +109,38 @@ nav .right a span {
 }
 
 /* SECTION 2: Skills */
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 0 50px;
+  margin-bottom: 80px;
+}
+
+.about-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 3px solid #d3d3d3;
+}
+
+.about-text h2 {
+  font-size: 24px;
+  margin-bottom: 12px;
+}
+
+.about-text p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #444;
+}
+
+.about-text p strong {
+  color: var(--text-color);
+}
+
 .skills-section {
   padding: 0 50px;
   margin-bottom: 100px;
@@ -122,6 +154,20 @@ nav .right a span {
 .skills-section .text {
   text-align: center;
   margin-bottom: 20px;
+}
+
+.skills-group {
+  margin-bottom: 30px;
+}
+
+.skills-group-label {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #888;
+  margin-bottom: 8px;
+  text-align: center;
 }
 
 .skills-section .cells {
