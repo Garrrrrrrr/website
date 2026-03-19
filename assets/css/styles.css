@@ -194,6 +194,49 @@ nav .right a span {
   font-size: 17px;
 }
 
+.preview-trigger {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-color);
+  margin-top: auto;
+  width: fit-content;
+  cursor: default;
+}
+
+
+.preview-popup {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 0;
+  background: var(--bg-color);
+  border: 1.5px solid #d3d3d3;
+  border-radius: 8px;
+  padding: 8px;
+  gap: 6px;
+  flex-wrap: wrap;
+  width: 320px;
+  z-index: 100;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+}
+
+.preview-trigger:hover .preview-popup {
+  display: flex;
+}
+
+.preview-popup img {
+  width: calc(50% - 3px);
+  border-radius: 4px;
+  object-fit: cover;
+  aspect-ratio: 4/3;
+}
+
+.preview-popup img:first-child {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+
 .projects-section .card p {
   font-size: 14px;
   color: #555;
