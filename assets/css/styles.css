@@ -154,6 +154,58 @@ nav .right a span {
   font-size: 18px;
 }
 
+/* SECTION 2b: Projects */
+.projects-section {
+  padding: 0 50px;
+  margin-bottom: 100px;
+}
+
+.projects-section h2 {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.projects-section .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.projects-section .card {
+  flex: 0 1 calc(33.333% - 14px);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 25px;
+  border: 1.5px solid #d3d3d3;
+  border-radius: 8px;
+  color: var(--text-color);
+  transition: border-color .15s, box-shadow .15s;
+}
+
+.projects-section .card:hover {
+  border-color: var(--link-color);
+  box-shadow: 0 4px 12px rgba(74, 118, 238, 0.12);
+}
+
+.projects-section .card h3 {
+  font-size: 17px;
+}
+
+.projects-section .card p {
+  font-size: 14px;
+  color: #555;
+  flex: 1;
+}
+
+.projects-section .card .lang {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--link-color);
+}
+
 /* SECTION 4: Contact */
 .contact-section {
   padding: 0 50px;
@@ -210,6 +262,12 @@ nav .right a span {
   /* SECTION 1: Hero */
   .hero-section .text h2 {
     font-size: 35px;
+  }
+}
+
+@media (max-width: 900px) {
+  .projects-section .card {
+    flex: 0 1 calc(50% - 10px);
   }
 }
 
@@ -270,6 +328,15 @@ nav .right a span {
   /* SECTION 2: Skills */
   .skills-section {
     padding: 0 20px;
+  }
+
+  /* SECTION 2b: Projects */
+  .projects-section {
+    padding: 0 20px;
+  }
+
+  .projects-section .card {
+    flex: 1 1 100%;
   }
 
   .skills-section .cells .cell span {
