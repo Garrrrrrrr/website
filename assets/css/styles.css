@@ -177,7 +177,6 @@ nav .right a span {
   flex: 0 1 calc(33.333% - 14px);
   display: flex;
   flex-direction: column;
-  gap: 10px;
   padding: 25px;
   border: 1.5px solid #d3d3d3;
   border-radius: 8px;
@@ -188,6 +187,14 @@ nav .right a span {
 .projects-section .card:hover {
   border-color: var(--link-color);
   box-shadow: 0 4px 12px rgba(74, 118, 238, 0.12);
+}
+
+.projects-section .card-link {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  color: var(--text-color);
 }
 
 .projects-section .card h3 {
@@ -201,16 +208,18 @@ nav .right a span {
   color: var(--text-color);
   margin-top: auto;
   width: fit-content;
-  cursor: default;
 }
 
+.preview-trigger:hover {
+  color: var(--link-color);
+}
 
 .preview-popup {
   display: none;
   position: absolute;
   bottom: calc(100% + 10px);
   left: 0;
-  background: var(--bg-color);
+  background: var(--background-color);
   border: 1.5px solid #d3d3d3;
   border-radius: 8px;
   padding: 8px;

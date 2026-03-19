@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <title>Gallery</title>
+  <style>
+    .gallery-page {
+      padding: 60px 50px;
+      min-height: 100vh;
+    }
+
+    .gallery-page .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-color);
+      text-decoration: none;
+      font-weight: 600;
+      margin-bottom: 32px;
+    }
+
+    .gallery-page .back:hover {
+      color: var(--link-color);
+    }
+
+    .gallery-page h1 {
+      font-size: 28px;
+      margin-bottom: 32px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+      gap: 16px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      border-radius: 8px;
+      border: 1.5px solid #d3d3d3;
+      object-fit: cover;
+      cursor: pointer;
+      transition: border-color .15s, box-shadow .15s;
+    }
+
+    .gallery-grid img:hover {
+      border-color: var(--link-color);
+      box-shadow: 0 4px 12px rgba(74, 118, 238, 0.12);
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    .lightbox img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 8px;
+      object-fit: contain;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 28px;
+      font-size: 32px;
+      color: #fff;
+      cursor: pointer;
+      line-height: 1;
+      background: none;
+      border: none;
+    }
+
+    @media (max-width: 600px) {
+      .gallery-page {
+        padding: 40px 20px;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery-page">
+    <a href="index.html#projects" class="back">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      Back
+    </a>
+    <h1 id="gallery-title"></h1>
+    <div class="gallery-grid" id="gallery-grid"></div>
+  </div>
+
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close">&times;</button>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    const projects = {
+      'stock': {
+        title: 'Stock Tracker App',
+        images: [
+          'images/projects/stock1.png',
+          'images/projects/stock2.png',
+          'images/projects/stock3.png',
+          'images/projects/stock4.png',
+          'images/projects/stock5.png',
+        ]
+      },
+      '3d-rendering': {
+        title: '3D Rendering Engine',
+        images: [
+          'images/projects/ppm1.png',
+          'images/projects/ppm2.png',
+          'images/projects/ppm3.png',
+          'images/projects/ppm4.png',
+          'images/projects/ppm5.png',
+        ]
+      },
+      'neurocalm': {
+        title: 'Neurocalm',
+        images: [
+          'images/projects/ncalm1.png',
+          'images/projects/ncalm2.png',
+          'images/projects/ncalm3.png',
+          'images/projects/ncalm4.png',
+        ]
+      },
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const key = params.get('project');
+    const project = projects[key];
+
+    if (project) {
+      document.title = project.title + ' — Gallery';
+      document.getElementById('gallery-title').textContent = project.title;
+      const grid = document.getElementById('gallery-grid');
+      project.images.forEach(src => {
+        const img = document.createElement('img');
+        img.src = src;
+        img.addEventListener('click', () => openLightbox(src));
+        grid.appendChild(img);
+      });
+    }
+
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+
+    function openLightbox(src) {
+      lightboxImg.src = src;
+      lightbox.classList.add('open');
+    }
+
+    document.getElementById('lightbox-close').addEventListener('click', () => lightbox.classList.remove('open'));
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.classList.remove('open'); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') lightbox.classList.remove('open'); });
+  </script>
+</body>
+</html>
