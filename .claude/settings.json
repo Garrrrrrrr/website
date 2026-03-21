@@ -6,7 +6,10 @@
       "Bash(curl -sO \"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg\")",
       "Bash(curl -sO \"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg\")",
       "Bash(curl -sO \"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg\")",
-      "Bash(curl -sO \"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg\")"
+      "Bash(curl -sO \"https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg\")",
+      "Bash(for i:*)",
+      "Bash(do mv:*)",
+      "Bash(done)"
     ]
   }
 }
