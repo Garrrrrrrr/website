@@ -4,6 +4,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Garrick Tse — Computing Science student at the University of Alberta. Portfolio showcasing full-stack projects, systems programming, and software engineering work.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Garrick Tse — Portfolio">
+  <meta property="og:description" content="Computing Science student at the University of Alberta. Full-stack developer building tools people actually use.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://garricktse.com">
+  <meta property="og:image" content="https://garricktse.com/images/cv/headshot.png">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>G</text></svg>">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,25 +34,29 @@
     </div>
 
     <div class="right">
-      <a href="https://github.com/Garrrrrrrr" target="_blank" rel="noopener noreferrer">
+      <a href="https://github.com/Garrrrrrrr" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
         <i class="fa-brands fa-github"></i>
         <span>Github</span>
       </a>
-      
-      <a href="https://www.linkedin.com/in/garrick-tse-6a5746229/" target="_blank" rel="noopener noreferrer">
+
+      <a href="https://www.linkedin.com/in/garrick-tse-6a5746229/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
         <i class="fa-brands fa-linkedin"></i>
         <span>Linkedin</span>
       </a>
-      
-      <a href="images/cv/Garrick_CV.pdf" download="Garrick_CV.pdf">
+
+      <a href="images/cv/Garrick_CV.pdf" download="Garrick_CV.pdf" aria-label="Download CV">
         <i class="fa-solid fa-file-pdf"></i>
         <span>CV</span>
       </a>
-      
-      <a href="mailto:g.tse8888@gmail.com">
+
+      <a href="mailto:g.tse8888@gmail.com" aria-label="Send email">
         <i class="fa-solid fa-envelope"></i>
         <span>Email</span>
       </a>
+
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
 
       <a href="#contact" class="contact-btn">Contact</a>
     </div>
@@ -51,14 +66,14 @@
     <!-- SECTION 1: Hero -->
     <section class="hero-section">
       <div class="text">
-        <h2>Hi, I'm Garrick 👋</h2>
+        <h2>Hi, I'm Garrick</h2>
         <p>I'm a Computing Science Student at the University of Alberta with a passion for creating innovative solutions. I have experience in building and maintaining full stack applications.</p>
       </div>
     </section>
 
     <!-- SECTION 1b: About -->
     <section id="about" class="about-section">
-      <img src="images/cv/headshot.png" alt="Garrick Tse" class="about-photo">
+      <img src="images/cv/headshot.png" alt="Photo of Garrick Tse" class="about-photo">
       <div class="about-text">
         <h2>About Me</h2>
         <p>I'm a third-year Computing Science student at the University of Alberta who gravitates toward problems that sit at the intersection of systems and product. I've built a 3D rendering engine from scratch in C, scraped and visualized millions of financial data points for a stock tracker, and architected a full-stack training platform for the training department at Gateway Casinos. I like understanding how things work at a low level, then using that to build things people actually use. I'm actively looking for <strong>Summer 2026 internship or co-op opportunities</strong> in software development — if you're working on something interesting, I'd love to hear about it.</p>
@@ -73,39 +88,39 @@
         <h3 class="skills-group-label">Languages</h3>
         <div class="cells">
           <div class="cell">
-            <img src="images/lang/python-original.svg" alt="python logo">
+            <img src="images/lang/python-original.svg" alt="Python logo">
             <span>Python</span>
           </div>
           <div class="cell">
-            <img src="images/lang/javascript-logo.webp" alt="javascript logo">
+            <img src="images/lang/javascript-logo.webp" alt="JavaScript logo">
             <span>JavaScript</span>
           </div>
           <div class="cell">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="typescript logo">
+            <img src="images/lang/typescript-original.svg" alt="TypeScript logo">
             <span>TypeScript</span>
           </div>
           <div class="cell">
-            <img src="images/lang/java-original.svg" alt="java logo">
+            <img src="images/lang/java-original.svg" alt="Java logo">
             <span>Java</span>
           </div>
           <div class="cell">
-            <img src="images/lang/c-original.svg" alt="c logo">
+            <img src="images/lang/c-original.svg" alt="C logo">
             <span>C</span>
           </div>
           <div class="cell">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="sql logo">
+            <img src="images/lang/postgresql-original.svg" alt="SQL logo">
             <span>SQL</span>
           </div>
           <div class="cell">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" alt="php logo">
+            <img src="images/lang/php-original.svg" alt="PHP logo">
             <span>PHP</span>
           </div>
           <div class="cell">
-            <img src="images/lang/html-logo.webp" alt="html logo">
+            <img src="images/lang/html-logo.webp" alt="HTML logo">
             <span>HTML</span>
           </div>
           <div class="cell">
-            <img src="images/lang/css-logo.webp" alt="css logo">
+            <img src="images/lang/css-logo.webp" alt="CSS logo">
             <span>CSS</span>
           </div>
         </div>
@@ -115,23 +130,23 @@
         <h3 class="skills-group-label">Frameworks & Libraries</h3>
         <div class="cells">
           <div class="cell">
-            <img src="images/lang/react-logo.webp" alt="react logo">
+            <img src="images/lang/react-logo.webp" alt="React logo">
             <span>React.js</span>
           </div>
           <div class="cell">
-            <img src="images/lang/node-logo.webp" alt="node logo">
+            <img src="images/lang/node-logo.webp" alt="Node.js logo">
             <span>Node.js</span>
           </div>
           <div class="cell">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" alt="express logo">
+            <img src="images/lang/express-original.svg" alt="Express logo">
             <span>Express</span>
           </div>
           <div class="cell">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" alt="pandas logo">
+            <img src="images/lang/pandas-original.svg" alt="Pandas logo">
             <span>Pandas</span>
           </div>
           <div class="cell">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" alt="numpy logo">
+            <img src="images/lang/numpy-original.svg" alt="NumPy logo">
             <span>NumPy</span>
           </div>
         </div>
@@ -141,31 +156,31 @@
         <h3 class="skills-group-label">Tools & Databases</h3>
         <div class="cells">
           <div class="cell">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="git logo">
+            <img src="images/lang/git-original.svg" alt="Git logo">
             <span>Git</span>
           </div>
           <div class="cell">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" alt="docker logo">
+            <img src="images/lang/docker-original.svg" alt="Docker logo">
             <span>Docker</span>
           </div>
           <div class="cell">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" alt="supabase logo">
+            <img src="images/lang/supabase-original.svg" alt="Supabase logo">
             <span>Supabase</span>
           </div>
           <div class="cell">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" alt="postgresql logo">
+            <img src="images/lang/postgresql-original.svg" alt="PostgreSQL logo">
             <span>PostgreSQL</span>
           </div>
           <div class="cell">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="mongodb logo">
+            <img src="images/lang/mongodb-original.svg" alt="MongoDB logo">
             <span>MongoDB</span>
           </div>
           <div class="cell">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" alt="firebase logo">
+            <img src="images/lang/firebase-original.svg" alt="Firebase logo">
             <span>Firebase</span>
           </div>
           <div class="cell">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="aws logo">
+            <img src="images/lang/amazonwebservices-plain-wordmark.svg" alt="AWS logo">
             <span>AWS</span>
           </div>
         </div>
@@ -182,25 +197,47 @@
         <div class="card">
           <a href="https://github.com/Garrrrrrrr/GatewayTrainingTool" target="_blank" rel="noopener noreferrer" class="card-link">
             <h3>Gateway Training Tool</h3>
-            <p>Web-based internal training management platform for Gateway Casinos supporting coordinators, trainers, and students across BC, AB, and ON Deployed on Vercel with Supabase backend.</p>
-            <span class="lang">TypeScript, React.js, Tailwind CSS</span>
+            <p>Web-based internal training management platform for Gateway Casinos supporting coordinators, trainers, and students across BC, AB, and ON. Deployed on Vercel with Supabase backend.</p>
+            <div class="lang">
+              <span class="pill">TypeScript</span>
+              <span class="pill">React.js</span>
+              <span class="pill">Tailwind CSS</span>
+              <span class="pill">Supabase</span>
+            </div>
           </a>
         </div>
 
         <div class="card">
           <a href="https://github.com/Garrrrrrrr/Neurocalm" target="_blank" rel="noopener noreferrer" class="card-link">
             <h3>Neurocalm</h3>
-            <p>EEG-based relaxation recommendation system using OpenBCI hardware. </p>
-            <span class="lang">Python, Javascript, HTML/CSS, Firebase Firestore, Node.js</span>
+            <p>EEG-based relaxation recommendation system using OpenBCI hardware with real-time visualization and reinforcement learning.</p>
+            <div class="lang">
+              <span class="pill">Python</span>
+              <span class="pill">React</span>
+              <span class="pill">WebSockets</span>
+              <span class="pill">Firebase</span>
+            </div>
           </a>
-          <a class="preview-trigger" href="gallery.html?project=neurocalm">
+          <a class="preview-trigger" href="gallery.html?project=neurocalm" aria-label="View Neurocalm screenshots">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
             <span class="preview-popup">
-              <img src="images/projects/ncalm1.png" alt="Screenshot 1">
-              <img src="images/projects/ncalm2.png" alt="Screenshot 2">
-              <img src="images/projects/ncalm3.png" alt="Screenshot 3">
-              <img src="images/projects/ncalm4.png" alt="Screenshot 4">
+              <img src="images/projects/ncalm1.png" alt="Neurocalm dashboard">
+              <img src="images/projects/ncalm2.png" alt="Neurocalm EEG view">
+              <img src="images/projects/ncalm3.png" alt="Neurocalm recommendations">
+              <img src="images/projects/ncalm4.png" alt="Neurocalm settings">
             </span>
+          </a>
+        </div>
+
+        <div class="card">
+          <a href="https://github.com/Garrrrrrrr/Android-Social-Media-Mood-App" target="_blank" rel="noopener noreferrer" class="card-link">
+            <h3>Android Social Media Mood App</h3>
+            <p>Scalable Android app built in an Agile team with optimized database queries and async handling, improving efficiency by 74%.</p>
+            <div class="lang">
+              <span class="pill">Java</span>
+              <span class="pill">Firebase</span>
+              <span class="pill">Android Studio</span>
+            </div>
           </a>
         </div>
 
@@ -208,7 +245,10 @@
           <a href="https://github.com/Garrrrrrrr/Twitter-Backend-Clone" target="_blank" rel="noopener noreferrer" class="card-link">
             <h3>Twitter Backend Clone</h3>
             <p>Twitter backend clone implemented using Python and MongoDB</p>
-            <span class="lang">Python, MongoDB</span>
+            <div class="lang">
+              <span class="pill">Python</span>
+              <span class="pill">MongoDB</span>
+            </div>
           </a>
         </div>
 
@@ -216,34 +256,41 @@
           <a href="https://github.com/Garrrrrrrr/Stock-Tracker-App" target="_blank" rel="noopener noreferrer" class="card-link">
             <h3>Stock Tracker App</h3>
             <p>Tracks financial disclosures and stock trades by prominent individuals with web scraping and a desktop interface</p>
-            <span class="lang">Python, BeautifulSoup, Tkinter</span>
+            <div class="lang">
+              <span class="pill">Python</span>
+              <span class="pill">Pandas</span>
+              <span class="pill">BeautifulSoup</span>
+              <span class="pill">Tkinter</span>
+            </div>
           </a>
-          <a class="preview-trigger" href="gallery.html?project=stock">
+          <a class="preview-trigger" href="gallery.html?project=stock" aria-label="View Stock Tracker screenshots">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
             <span class="preview-popup">
-              <img src="images/projects/stock1.png" alt="Screenshot 1">
-              <img src="images/projects/stock2.png" alt="Screenshot 2">
-              <img src="images/projects/stock3.png" alt="Screenshot 3">
-              <img src="images/projects/stock4.png" alt="Screenshot 4">
-              <img src="images/projects/stock5.png" alt="Screenshot 5">
+              <img src="images/projects/stock1.png" alt="Stock Tracker main view">
+              <img src="images/projects/stock2.png" alt="Stock Tracker filtering">
+              <img src="images/projects/stock3.png" alt="Stock Tracker chart">
+              <img src="images/projects/stock4.png" alt="Stock Tracker export">
+              <img src="images/projects/stock5.png" alt="Stock Tracker details">
             </span>
           </a>
         </div>
 
         <div class="card">
-          <a href="https://github.com/Garrrrrrrr/3D-Rendering-Engine" target="_blank" rel="noopener noreferrer" class="card-link">
+          <a href="https://github.com/Garrrrrrrr/Ray-Tracing-Engine-in-C" target="_blank" rel="noopener noreferrer" class="card-link">
             <h3>3D Rendering Engine</h3>
-            <p>A 3D rendering engine built from scratch in pure C.</p>
-            <span class="lang">C</span>
+            <p>A 3D rendering engine built from scratch in pure C with ray-sphere intersection, lighting calculations, and PPM image rendering.</p>
+            <div class="lang">
+              <span class="pill">C</span>
+            </div>
           </a>
-          <a class="preview-trigger" href="gallery.html?project=3d-rendering">
+          <a class="preview-trigger" href="gallery.html?project=3d-rendering" aria-label="View 3D Rendering Engine renders">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
             <span class="preview-popup">
-              <img src="images/projects/ppm1.png" alt="Render 1">
-              <img src="images/projects/ppm2.png" alt="Render 2">
-              <img src="images/projects/ppm3.png" alt="Render 3">
-              <img src="images/projects/ppm4.png" alt="Render 4">
-              <img src="images/projects/ppm5.png" alt="Render 5">
+              <img src="images/projects/ppm1.png" alt="Ray traced sphere render">
+              <img src="images/projects/ppm2.png" alt="Ray traced lighting">
+              <img src="images/projects/ppm3.png" alt="Ray traced shadows">
+              <img src="images/projects/ppm4.png" alt="Ray traced reflections">
+              <img src="images/projects/ppm5.png" alt="Ray traced final scene">
             </span>
           </a>
         </div>
@@ -276,6 +323,18 @@
       </div>
     </section>
   </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2026 Garrick Tse. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://github.com/Garrrrrrrr" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/garrick-tse-6a5746229/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:g.tse8888@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
 
   <script src="assets/js/script.js"></script>
 </body>

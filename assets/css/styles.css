@@ -1,7 +1,23 @@
 :root {
   --text-color: #1a1c20;
+  --text-secondary: #555;
   --link-color: #4a76ee;
   --background-color: #eeeff1;
+  --card-border: #d3d3d3;
+  --card-bg: #fff;
+  --pill-bg: rgba(74, 118, 238, 0.08);
+  --pill-border: rgba(74, 118, 238, 0.2);
+}
+
+[data-theme="dark"] {
+  --text-color: #e4e4e7;
+  --text-secondary: #a1a1aa;
+  --link-color: #6d9bff;
+  --background-color: #18181b;
+  --card-border: #3f3f46;
+  --card-bg: #27272a;
+  --pill-bg: rgba(109, 155, 255, 0.1);
+  --pill-border: rgba(109, 155, 255, 0.25);
 }
 
 * {
@@ -32,7 +48,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 0 50px;
   height: 80px;
 }
@@ -43,12 +58,17 @@ nav .left a {
   font-weight: 600;
 }
 
+nav .right {
+  display: flex;
+  align-items: center;
+}
+
 nav .right a {
   color: var(--text-color);
   margin: 0 10px;
 }
 
-nav .right a:last-child {
+nav .right a.contact-btn {
   color: var(--background-color);
   background-color: var(--text-color);
   padding: 5px 15px;
@@ -57,6 +77,20 @@ nav .right a:last-child {
 
 nav .right a span {
   margin-left: 5px;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  color: var(--text-color);
+  font-size: 18px;
+  cursor: pointer;
+  margin: 0 10px;
+  padding: 5px;
+}
+
+.theme-toggle:hover {
+  color: var(--link-color);
 }
 
 /* SECTION 1: Hero */
@@ -108,7 +142,7 @@ nav .right a span {
   border-radius: 50%;
 }
 
-/* SECTION 2: Skills */
+/* About */
 .about-section {
   display: flex;
   align-items: center;
@@ -123,7 +157,7 @@ nav .right a span {
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
-  border: 3px solid #d3d3d3;
+  border: 3px solid var(--card-border);
 }
 
 .about-text h2 {
@@ -134,13 +168,14 @@ nav .right a span {
 .about-text p {
   font-size: 15px;
   line-height: 1.75;
-  color: #444;
+  color: var(--text-secondary);
 }
 
 .about-text p strong {
   color: var(--text-color);
 }
 
+/* SECTION 2: Skills */
 .skills-section {
   padding: 0 50px;
   margin-bottom: 100px;
@@ -165,7 +200,7 @@ nav .right a span {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #888;
+  color: var(--text-secondary);
   margin-bottom: 8px;
   text-align: center;
 }
@@ -181,12 +216,12 @@ nav .right a span {
   justify-content: center;
   align-items: center;
   gap: 10px;
-
   width: 200px;
   padding: 10px 20px;
   margin: 10px;
-  border: 1.5px solid #d3d3d3;
+  border: 1.5px solid var(--card-border);
   border-radius: 5px;
+  background-color: var(--card-bg);
 }
 
 .skills-section .cells .cell img {
@@ -224,8 +259,9 @@ nav .right a span {
   display: flex;
   flex-direction: column;
   padding: 25px;
-  border: 1.5px solid #d3d3d3;
+  border: 1.5px solid var(--card-border);
   border-radius: 8px;
+  background-color: var(--card-bg);
   color: var(--text-color);
   transition: border-color .15s, box-shadow .15s;
 }
@@ -247,12 +283,38 @@ nav .right a span {
   font-size: 17px;
 }
 
+.projects-section .card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  flex: 1;
+}
+
+.projects-section .card .lang {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pill {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--link-color);
+  background-color: var(--pill-bg);
+  border: 1px solid var(--pill-border);
+  padding: 3px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* Preview trigger */
 .preview-trigger {
   position: relative;
   display: inline-flex;
   align-items: center;
   color: var(--text-color);
   margin-top: auto;
+  padding-top: 10px;
   width: fit-content;
 }
 
@@ -265,8 +327,8 @@ nav .right a span {
   position: absolute;
   bottom: calc(100% + 10px);
   left: 0;
-  background: var(--background-color);
-  border: 1.5px solid #d3d3d3;
+  background: var(--card-bg);
+  border: 1.5px solid var(--card-border);
   border-radius: 8px;
   padding: 8px;
   gap: 6px;
@@ -292,19 +354,7 @@ nav .right a span {
   aspect-ratio: 16/9;
 }
 
-.projects-section .card p {
-  font-size: 14px;
-  color: #555;
-  flex: 1;
-}
-
-.projects-section .card .lang {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--link-color);
-}
-
-/* SECTION 4: Contact */
+/* SECTION 3: Contact */
 .contact-section {
   padding: 0 50px;
   margin-bottom: 100px;
@@ -322,6 +372,7 @@ nav .right a span {
 .contact-section .group .text {
   flex: 3;
   margin-top: 20px;
+  color: var(--text-secondary);
 }
 
 .contact-section .group form {
@@ -335,6 +386,7 @@ nav .right a span {
   font-family: 'Poppins', sans-serif;
   border: 2px solid var(--link-color);
   background-color: transparent;
+  color: var(--text-color);
   padding: 10px;
   margin-bottom: 15px;
   outline: none;
@@ -356,21 +408,52 @@ nav .right a span {
   filter: brightness(.9);
 }
 
-@media (max-width: 850px) {
-  /* SECTION 1: Hero */
-  .hero-section .text h2 {
-    font-size: 35px;
-  }
+/* FOOTER */
+footer {
+  border-top: 1px solid var(--card-border);
+  padding: 30px 50px;
 }
 
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-content p {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+  font-size: 20px;
+  transition: color .15s;
+}
+
+.footer-links a:hover {
+  color: var(--link-color);
+}
+
+/* RESPONSIVE */
 @media (max-width: 900px) {
   .projects-section .card {
     flex: 0 1 calc(50% - 10px);
   }
 }
 
+@media (max-width: 850px) {
+  .hero-section .text h2 {
+    font-size: 35px;
+  }
+}
+
 @media (max-width: 740px) {
-  /* SECTION 1: Hero */
   .hero-section {
     flex-direction: column-reverse;
   }
@@ -379,23 +462,23 @@ nav .right a span {
     width: 300px;
   }
 
-  /* SECTION 3: Testimony */
-  .testimony-section {
+  .about-section {
+    flex-direction: column;
     text-align: center;
   }
 
-  .testimony-section .group {
+  .contact-section .group {
     flex-direction: column;
   }
 
-  /* SECTION 4: Contact */
-  .contact-section .group {
+  .footer-content {
     flex-direction: column;
+    gap: 15px;
+    text-align: center;
   }
 }
 
 @media (max-width: 600px) {
-  /* NAVBAR */
   nav {
     padding: 0 20px;
   }
@@ -404,7 +487,7 @@ nav .right a span {
     font-size: 22px;
   }
 
-  nav .right a:last-child {
+  nav .right a.contact-btn {
     color: var(--text-color);
     background-color: transparent;
     padding: 0;
@@ -414,7 +497,6 @@ nav .right a span {
     display: none;
   }
 
-  /* SECTION 1: Hero */
   .hero-section {
     padding: 0 20px;
   }
@@ -423,12 +505,14 @@ nav .right a span {
     font-size: 30px;
   }
 
-  /* SECTION 2: Skills */
+  .about-section {
+    padding: 0 20px;
+  }
+
   .skills-section {
     padding: 0 20px;
   }
 
-  /* SECTION 2b: Projects */
   .projects-section {
     padding: 0 20px;
   }
@@ -441,13 +525,11 @@ nav .right a span {
     font-size: 16px;
   }
 
-  /* SECTION 3: Testimony */
-  .testimony-section {
+  .contact-section {
     padding: 0 20px;
   }
 
-  /* SECTION 4: Contact */
-  .contact-section {
-    padding: 0 20px;
+  footer {
+    padding: 30px 20px;
   }
 }
