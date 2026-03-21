@@ -456,10 +456,17 @@ footer {
 @media (max-width: 740px) {
   .hero-section {
     flex-direction: column-reverse;
+    margin-bottom: 60px;
   }
 
   .hero-section .headshot img {
-    width: 300px;
+    width: 250px;
+  }
+
+  /* About section: stack vertically */
+  .about-section {
+    flex-direction: column;
+    text-align: center;
   }
 
   .about-section {
@@ -476,21 +483,38 @@ footer {
     gap: 15px;
     text-align: center;
   }
+
+  /* Hide hover-only preview popups (unusable on touch) */
+  .preview-popup {
+    display: none !important;
+  }
 }
 
 @media (max-width: 600px) {
   nav {
-    padding: 0 20px;
+    padding: 0 16px;
+    height: 60px;
+  }
+
+  nav .left a {
+    font-size: 18px;
   }
 
   nav .right a {
     font-size: 22px;
+    padding: 8px;
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 2px;
   }
 
   nav .right a.contact-btn {
     color: var(--text-color);
     background-color: transparent;
-    padding: 0;
+    padding: 8px;
   }
 
   nav .right a span {
@@ -499,10 +523,35 @@ footer {
 
   .hero-section {
     padding: 0 20px;
+    margin: 30px 0;
+    margin-bottom: 50px;
   }
 
   .hero-section .text h2 {
-    font-size: 30px;
+    font-size: 26px;
+  }
+
+  .hero-section .text p {
+    font-size: 14px;
+  }
+
+  .hero-section .headshot img {
+    width: 200px;
+  }
+
+  /* About */
+  .about-section {
+    padding: 0 20px;
+    margin-bottom: 50px;
+  }
+
+  .about-photo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .about-text p {
+    font-size: 14px;
   }
 
   .about-section {
@@ -511,22 +560,74 @@ footer {
 
   .skills-section {
     padding: 0 20px;
+    margin-bottom: 60px;
+  }
+
+  .skills-section h2 {
+    font-size: 28px;
+  }
+
+  .skills-section .cells .cell {
+    width: 150px;
+    padding: 8px 14px;
+    margin: 6px;
+  }
+
+  .skills-section .cells .cell span {
+    font-size: 14px;
+  }
+
+  .skills-section .cells .cell img {
+    width: 24px;
+    height: 24px;
   }
 
   .projects-section {
     padding: 0 20px;
+    margin-bottom: 60px;
+  }
+
+  .projects-section h2 {
+    font-size: 28px;
   }
 
   .projects-section .card {
     flex: 1 1 100%;
-  }
-
-  .skills-section .cells .cell span {
-    font-size: 16px;
+    padding: 20px;
   }
 
   .contact-section {
     padding: 0 20px;
+    margin-bottom: 60px;
+  }
+
+  .contact-section h2 {
+    font-size: 28px;
+  }
+
+  /* Prevent iOS zoom on input focus (requires >= 16px) */
+  .contact-section .group form input,
+  .contact-section .group form textarea {
+    font-size: 16px;
+  }
+
+  .contact-section .group form button {
+    min-height: 48px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-section .text h2 {
+    font-size: 22px;
+  }
+
+  .skills-section .cells .cell {
+    width: 130px;
+    padding: 6px 10px;
+  }
+
+  .skills-section .cells .cell span {
+    font-size: 13px;
   }
 
   footer {
