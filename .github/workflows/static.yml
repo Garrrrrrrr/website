@@ -31,13 +31,30 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: blackjack/package-lock.json
+      - name: Build blackjack trainer
+        working-directory: blackjack
+        run: |
+          npm ci
+          npm run build
+      - name: Assemble site
+        run: |
+          mkdir -p _site/blackjack
+          cp index.html gallery.html LICENSE _site/
+          cp -R assets images _site/
+          cp -R blackjack/out/. _site/blackjack/
+          touch _site/.nojekyll
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # Upload entire repository
-          path: '.'
+          path: '_site'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
