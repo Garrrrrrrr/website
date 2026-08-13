@@ -1,5 +1,5 @@
 from uth.cards import parse_card, parse_cards
-from uth.solver import flop_decision, river_decision
+from uth.solver import flop_decision, reference_opening_decision, river_decision
 from uth.state import ActualState
 
 
@@ -33,3 +33,11 @@ def test_exposed_flop_is_exact_backward_induction():
     assert result.exact and result.method == "EXACT"
     assert result.outcomes == 45_540
     assert set(result.evs) == {"2X", "CHECK"}
+
+
+def test_uninformed_opening_reference_does_not_invent_an_ev_margin():
+    state = ActualState(parse_cards("As Qs"), parse_card("Kh"), parse_card("2c"), parse_cards("Js 8s 3c 2d 7h")).information(0, False)
+    result = reference_opening_decision(state)
+    assert result.action == "4X"
+    assert result.evs == {}
+    assert result.method == "PUBLISHED_OPTIMAL_STRATEGY"

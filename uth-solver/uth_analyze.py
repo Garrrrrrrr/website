@@ -4,7 +4,7 @@ import argparse
 import json
 
 from uth.cards import card_name, parse_card, parse_cards
-from uth.solver import solve
+from uth.solver import reference_opening_decision, solve
 from uth.state import InformationState
 
 
@@ -22,15 +22,18 @@ def main() -> None:
     state = InformationState(player, board, visible)
     informed = solve(state, samples=args.samples, seed=args.seed)
     normal_state = InformationState(player, board)
-    normal = informed if visible is None else solve(normal_state, samples=args.samples, seed=args.seed)
+    normal = (informed if visible is None else reference_opening_decision(normal_state)
+              if state.stage == "opening" else solve(normal_state, samples=args.samples, seed=args.seed))
     informed_best = max(informed.evs.values())
-    normal_action_conditional_ev = informed.evs.get(normal.action, informed_best)
+    normal_action_conditional_ev = (informed.evs.get(normal.action)
+                                    if normal.status == informed.status == "CONFIRMED" else None)
+    policy_improvement = None if normal_action_conditional_ev is None else max(0.0, informed_best - normal_action_conditional_ev)
     output = {"game": "Ultimate Texas Hold'em", "stage": state.stage,
         "player": [card_name(card) for card in player], "dealer_visible": args.dealer_visible,
         "board": [card_name(card) for card in board], "informed": informed.to_dict(),
-        "normal": normal.to_dict(), "information_value": informed_best - normal_action_conditional_ev,
+        "normal": normal.to_dict(), "policy_improvement": policy_improvement,
         "normal_action_ev_conditioned_on_exposed_card": normal_action_conditional_ev,
-        "action_changed": informed.action != normal.action}
+        "action_changed": informed.action != normal.action if informed.status == normal.status == "CONFIRMED" else None}
     if args.json:
         print(json.dumps(output, indent=2))
         return
@@ -43,7 +46,8 @@ def main() -> None:
         print(f"{action:8} EV: {ev:+.6f}")
     print(f"\nOPTIMAL: {informed.action}\nMethod: {informed.method}\nStatus: {informed.status}")
     print(f"Without dealer information: {normal.action}")
-    print(f"Value of exposed information: {output['information_value']:+.6f}")
+    value = output["policy_improvement"]
+    print(f"Exposed-state policy improvement: {value:+.6f}" if value is not None else "Exposed-state policy improvement: pending confirmed normal action")
 
 
 if __name__ == "__main__":

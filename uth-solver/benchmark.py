@@ -6,7 +6,7 @@ from random import Random
 from time import perf_counter
 
 from uth.reports import metadata, write_json
-from uth.simulation import deal, simulate
+from uth.simulation import deal, simulate, simulate_parallel
 from uth.solver import flop_decision, river_decision
 
 
@@ -29,12 +29,17 @@ def main() -> None:
     river = rate(river_decision, [item.information(5, True) for item in deals])
     flop = rate(flop_decision, [item.information(3, True) for item in deals])
     start = perf_counter(); simulate("baseline", args.hands, quality="basic"); complete = args.hands / (perf_counter() - start)
+    start = perf_counter(); parallel = simulate_parallel("baseline", args.hands, quality="basic", workers=args.workers); parallel_rate = args.hands / (perf_counter() - start)
     rates = {"river": river, "flop": flop, "preflop": {"note": "sampled flops with exact children; state dependent"},
-             "complete_hands_per_second_single_core_basic": complete}
-    seconds = {label: count / complete for label, count in {"1M": 1e6, "10M": 1e7, "100M": 1e8,
-        "1B": 1e9, "10B": 1e10, "100B": 1e11, "1T": 1e12}.items()}
+             "complete_hands_per_second_single_core_basic": complete,
+             "complete_hands_per_second_parallel_basic": parallel_rate,
+             "parallelism": parallel["parallelism"]}
+    volumes = {"1M": 1e6, "10M": 1e7, "100M": 1e8, "1B": 1e9,
+               "10B": 1e10, "100B": 1e11, "1T": 1e12}
+    seconds = {"single_core": {label: count / complete for label, count in volumes.items()},
+               "parallel": {label: count / parallel_rate for label, count in volumes.items()}}
     result = {"metadata": metadata(args.hands, 20260813), "rates": rates, "estimated_seconds": seconds,
-              "all_core": "not implemented in Python reference runner", "memory": "streaming O(1), caches excluded"}
+              "all_core": "deterministic SplitMix64-derived multiprocessing streams", "memory": "streaming O(workers), caches excluded"}
     write_json("results/uth/benchmark.json", result)
     print(json.dumps(result, indent=2))
 

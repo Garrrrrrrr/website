@@ -23,13 +23,16 @@ def main() -> None:
         normal = solve(actual.information(board_cards, False))
         exposed = solve(actual.information(board_cards, True))
         if normal.action != exposed.action:
+            normal_action_conditional_ev = exposed.evs[normal.action]
             changes.append({"player": [card_name(card) for card in actual.player],
                 "board": [card_name(card) for card in actual.board[:board_cards]],
                 "dealer_exposed": card_name(actual.dealer_visible), "normal_action": normal.action,
                 "exposed_action": exposed.action, "normal_ev": max(normal.evs.values()),
                 "exposed_ev": max(exposed.evs.values()), "normal_margin": normal.difference,
                 "exposed_margin": exposed.difference,
-                "information_value": max(exposed.evs.values()) - max(normal.evs.values())})
+                "conditional_ev_shift": max(exposed.evs.values()) - max(normal.evs.values()),
+                "normal_action_ev_conditioned_on_exposed_card": normal_action_conditional_ev,
+                "policy_improvement": max(0.0, max(exposed.evs.values()) - normal_action_conditional_ev)})
     result = {"metadata": metadata(args.states, args.seed), "stage": args.stage,
               "states_examined": args.states, "changes": changes}
     write_json("results/uth/strategy_changes.json", result)

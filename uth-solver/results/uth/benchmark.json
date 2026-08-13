@@ -1,18 +1,31 @@
 {
-  "all_core": "not implemented in Python reference runner",
+  "all_core": "deterministic SplitMix64-derived multiprocessing streams",
   "estimated_seconds": {
-    "100B": 6776665.999786928,
-    "100M": 6776.665999786928,
-    "10B": 677666.5999786928,
-    "10M": 677.6665999786928,
-    "1B": 67766.65999786928,
-    "1M": 67.76665999786928,
-    "1T": 67766659.99786928
+    "parallel": {
+      "100B": 647460.2000089362,
+      "100M": 647.4602000089362,
+      "10B": 64746.02000089362,
+      "10M": 64.74602000089362,
+      "1B": 6474.602000089362,
+      "1M": 6.474602000089362,
+      "1T": 6474602.000089362
+    },
+    "single_core": {
+      "100B": 6852764.699986437,
+      "100M": 6852.764699986437,
+      "10B": 685276.4699986437,
+      "10M": 685.2764699986437,
+      "1B": 68527.64699986437,
+      "1M": 68.52764699986437,
+      "1T": 68527646.99986437
+    }
   },
-  "memory": "streaming O(1), caches excluded",
+  "memory": "streaming O(workers), caches excluded",
   "metadata": {
-    "created_at": "2026-08-13T18:44:02.049672+00:00",
-    "git_commit": "2d136cb0d2f956d33f832f8d146603b91ed25895",
+    "confidence_method": "paired normal interval; finite-population correction for sampled flop states",
+    "created_at": "2026-08-13T19:27:50.917932+00:00",
+    "ev_unit": "net round profit in Ante units",
+    "git_commit": "b0b4fdd967c3984c9654ef24cb963fb5a736f67d",
     "paytable": {
       "flush": 1.5,
       "four_of_a_kind": 10.0,
@@ -22,29 +35,73 @@
       "straight": 1.0,
       "straight_flush": 50.0
     },
+    "policy_sha256": "3e6ac07b8c10c29badaf1079bbc9765d6af9ec5aefb955dd1c8f886996f4651f",
+    "python": "3.14.6",
+    "rng": "Python MT19937; parallel seeds derived by SplitMix64",
     "rules_version": "Wizard of Odds, accessed 2026-08-13; page updated 2026-08-03",
-    "sample_count": 5000,
+    "sample_count": 100000,
     "seed": 20260813,
-    "solver_version": "0.1.0"
+    "solver_version": "0.2.0"
   },
   "rates": {
-    "complete_hands_per_second_single_core_basic": 14756.518914041832,
+    "complete_hands_per_second_parallel_basic": 154449.6480225654,
+    "complete_hands_per_second_single_core_basic": 14592.650467073227,
     "flop": {
-      "seconds": 0.8222263999923598,
+      "seconds": 0.8213996000122279,
       "states": 3,
-      "states_per_second": 3.64863010969713,
+      "states_per_second": 3.6523027281183724,
       "terminal_outcomes": 136620,
-      "terminal_outcomes_per_second": 166158.6151956073
+      "terminal_outcomes_per_second": 166325.8662385107
+    },
+    "parallelism": {
+      "deterministic": true,
+      "disjoint_prng_instances": true,
+      "stream_method": "splitmix64",
+      "stream_seeds": [
+        13604793195621473946,
+        11659246549464438061,
+        6193690098929164927,
+        12308432762469697198,
+        4005740211921626460,
+        3166027334268849483,
+        18153884239649349252,
+        5443295083424088938,
+        18423380111960422168,
+        9734694679086297578,
+        771436330119231615,
+        3175913703140873822,
+        11270713263995647143,
+        11844370769303688081,
+        17718694714138437668,
+        14405793537897586761,
+        7996782762894817549,
+        13193436089926472096,
+        283084283387929719,
+        1330007696390440506,
+        993220217517245739,
+        14474146207511975189,
+        5180995055211939186,
+        2686335758301858125,
+        5065826619566922263,
+        5217706173443749712,
+        2742215836413753955,
+        3236763314058578888,
+        7735541815273505627,
+        18175372952626625067,
+        9949652290880499609,
+        17815563956714058195
+      ],
+      "workers": 32
     },
     "preflop": {
       "note": "sampled flops with exact children; state dependent"
     },
     "river": {
-      "seconds": 0.0007487000257242471,
+      "seconds": 0.0007851000118535012,
       "states": 3,
-      "states_per_second": 4006.9452343052635,
+      "states_per_second": 3821.169220106695,
       "terminal_outcomes": 132,
-      "terminal_outcomes_per_second": 176305.5903094316
+      "terminal_outcomes_per_second": 168131.44568469457
     }
   }
 }
