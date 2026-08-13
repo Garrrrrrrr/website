@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import os
+from concurrent.futures import ProcessPoolExecutor
 from dataclasses import dataclass
 from random import Random
 from time import perf_counter
@@ -105,6 +107,75 @@ def simulate(mode: str, hands: int, seed: int = 20260813, quality: str = "basic"
             "full": means["exposed"] - means["baseline"]}
     result["quality"] = quality
     return result
+
+
+def _splitmix64(value: int) -> int:
+    value = (value + 0x9E3779B97F4A7C15) & ((1 << 64) - 1)
+    value = ((value ^ (value >> 30)) * 0xBF58476D1CE4E5B9) & ((1 << 64) - 1)
+    value = ((value ^ (value >> 27)) * 0x94D049BB133111EB) & ((1 << 64) - 1)
+    return value ^ (value >> 31)
+
+
+def _stats_from_dict(data: dict[str, object]) -> RunningStats:
+    count = int(data["count"])
+    return RunningStats(count, float(data["mean"]), float(data["variance"]) * max(0, count - 1))
+
+
+def _merge_parallel_results(parts: list[dict[str, object]], mode: str, quality: str,
+                            runtime: float, workers: int, seeds: list[int]) -> dict[str, object]:
+    policies = list(POLICIES) if mode == "stages" else (["baseline", "exposed"] if mode == "paired" else [mode])
+    result: dict[str, object] = {}
+    for policy in policies:
+        stats = RunningStats()
+        play_total = 0.0
+        actions = {key: 0 for key in ("4X", "2X", "1X", "FOLD")}
+        for part in parts:
+            summary = part[policy]
+            child = _stats_from_dict(summary["statistics"])
+            stats.merge(child)
+            play_total += float(summary["average_play_wager"]) * child.count
+            for action, frequency in summary["actions"].items():
+                actions[action] += round(float(frequency) * child.count)
+        result[policy] = _summary(stats, play_total, actions, runtime)
+    if mode in ("paired", "stages"):
+        paired = RunningStats()
+        for part in parts:
+            paired.merge(_stats_from_dict(part["information_value"]))
+        result["information_value"] = paired.to_dict()
+    if mode == "stages":
+        means = {name: result[name]["ev_per_round"] for name in policies}
+        result["stage_value"] = {"river_only": means["river"] - means["baseline"],
+            "additional_flop": means["flop"] - means["river"],
+            "additional_preflop": means["exposed"] - means["flop"],
+            "full": means["exposed"] - means["baseline"]}
+    result["quality"] = quality
+    result["parallelism"] = {"workers": workers, "stream_seeds": seeds,
+                             "stream_method": "splitmix64", "deterministic": True,
+                             "disjoint_prng_instances": True}
+    return result
+
+
+def simulate_parallel(mode: str, hands: int, seed: int = 20260813, quality: str = "basic",
+                      opening_samples: int = 8, workers: int | str = "auto") -> dict[str, object]:
+    """Run deterministic independent PRNG streams and merge moments exactly."""
+    if hands < 1:
+        raise ValueError("hands must be positive")
+    requested = min(32, os.cpu_count() or 1) if workers == "auto" else int(workers)
+    worker_count = max(1, min(requested, hands))
+    if worker_count == 1:
+        result = simulate(mode, hands, seed, quality, opening_samples)
+        result["parallelism"] = {"workers": 1, "stream_seeds": [seed],
+                                 "stream_method": "single", "deterministic": True,
+                                 "disjoint_prng_instances": True}
+        return result
+    sizes = [hands // worker_count + (index < hands % worker_count) for index in range(worker_count)]
+    seeds = [_splitmix64(seed + index) for index in range(worker_count)]
+    started = perf_counter()
+    with ProcessPoolExecutor(max_workers=worker_count) as executor:
+        futures = [executor.submit(simulate, mode, count, stream_seed, quality, opening_samples)
+                   for count, stream_seed in zip(sizes, seeds, strict=True)]
+        parts = [future.result() for future in futures]
+    return _merge_parallel_results(parts, mode, quality, perf_counter() - started, worker_count, seeds)
 
 
 def dealer_categories(actual: ActualState) -> dict[str, object]:

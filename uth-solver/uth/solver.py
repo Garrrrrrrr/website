@@ -5,12 +5,13 @@ from itertools import combinations
 from random import Random
 from time import perf_counter
 
-from .cards import DECK
+from .cards import DECK, rank, suit
 from .evaluator import evaluate7
 from .rules import UTHRules
 from .settlement import settle, settle_fold
 from .state import InformationState
-from .statistics import RunningStats, recommendation_status
+from .statistics import RunningStats, StratifiedStats, recommendation_status
+from .strategy import basic_opening_action
 
 
 @dataclass(frozen=True, slots=True)
@@ -103,29 +104,70 @@ def flop_decision(state: InformationState, rules: UTHRules = UTHRules(), include
 def opening_decision(state: InformationState, samples: int = 200, seed: int = 20260813,
                      confidence: float = 0.999, precision: float = 0.001,
                      rules: UTHRules = UTHRules()) -> Decision:
-    """Paired sampled flops with exact conditional backward induction at each sampled flop."""
+    """Stratified sampled flops with exact conditional backward induction.
+
+    The only sampling error is over flop information states. Every turn, river,
+    dealer holding, and legal continuation below a selected flop is enumerated.
+    """
     if state.board:
         raise ValueError("opening decision requires no board")
     started = perf_counter()
-    flops = list(combinations(_remaining(state), 3))
-    Random(seed).shuffle(flops)
-    delta = RunningStats()
-    bet = check = 0.0
+    groups: dict[tuple[tuple[int, ...], tuple[int, ...]], list[tuple[int, int, int]]] = {}
+    for flop in combinations(_remaining(state), 3):
+        rank_counts = sorted(({rank(card): sum(rank(other) == rank(card) for other in flop)
+                               for card in flop}).values(), reverse=True)
+        suit_counts = sorted(({suit(card): sum(suit(other) == suit(card) for other in flop)
+                               for card in flop}).values(), reverse=True)
+        groups.setdefault((tuple(rank_counts), tuple(suit_counts)), []).append(flop)
+    population = sum(map(len, groups.values()))
+    sample_count = max(len(groups), min(samples, population))
+    minimum = 2 if sample_count >= len(groups) * 2 else 1
+    allocations = [min(minimum, len(flops)) for flops in groups.values()]
+    remaining_samples = sample_count - sum(allocations)
+    while remaining_samples:
+        candidates = [index for index, flops in enumerate(groups.values()) if allocations[index] < len(flops)]
+        selected = max(candidates, key=lambda index: (len(tuple(groups.values())[index]) - allocations[index]) / (allocations[index] + 1))
+        allocations[selected] += 1
+        remaining_samples -= 1
+    state_seed = seed
+    for card in state.known_cards:
+        state_seed = ((state_seed ^ card) * 16_777_619) & ((1 << 64) - 1)
+    rng = Random(state_seed)
+    strata: list[tuple[int, RunningStats]] = []
+    bet_strata: list[tuple[int, RunningStats]] = []
+    check_strata: list[tuple[int, RunningStats]] = []
     outcomes = 0
-    for flop in flops[:min(samples, len(flops))]:
-        child = flop_decision(InformationState(state.player, flop, state.dealer_visible), rules, include_opening=True)
-        ev4 = child.evs["4X"]
-        ev_check = max(child.evs["2X"], child.evs["CHECK"])
-        bet += ev4
-        check += ev_check
-        delta.add(ev4 - ev_check)
-        outcomes += child.outcomes
-    bet /= delta.count
-    check /= delta.count
-    status = recommendation_status(delta, precision, confidence)
+    for flops, allocated in zip(groups.values(), allocations, strict=True):
+        rng.shuffle(flops)
+        delta_stats, bet_stats, check_stats = RunningStats(), RunningStats(), RunningStats()
+        for flop in flops[:allocated]:
+            child = flop_decision(InformationState(state.player, flop, state.dealer_visible), rules, include_opening=True)
+            ev4 = child.evs["4X"]
+            ev_check = max(child.evs["2X"], child.evs["CHECK"])
+            bet_stats.add(ev4)
+            check_stats.add(ev_check)
+            delta_stats.add(ev4 - ev_check)
+            outcomes += child.outcomes
+        strata.append((len(flops), delta_stats))
+        bet_strata.append((len(flops), bet_stats))
+        check_strata.append((len(flops), check_stats))
+    delta = StratifiedStats(strata)
+    bet = StratifiedStats(bet_strata).mean
+    check = StratifiedStats(check_strata).mean
+    exact = sample_count == population
+    status = "CONFIRMED" if exact else recommendation_status(delta, precision, confidence)
     action = ("4X" if delta.mean >= 0 else "CHECK") if status == "CONFIRMED" else status
-    return Decision(action, {"4X": bet, "CHECK": check}, abs(delta.mean), "PAIRED_MONTE_CARLO+EXACT_CHILDREN",
-                    False, outcomes, perf_counter() - started, status, delta.to_dict(confidence))
+    method = "EXACT" if exact else "PAIRED_STRATIFIED_MONTE_CARLO+EXACT_CHILDREN"
+    return Decision(action, {"4X": bet, "CHECK": check}, abs(delta.mean), method,
+                    exact, outcomes, perf_counter() - started, status, delta.to_dict(confidence))
+
+
+def reference_opening_decision(state: InformationState) -> Decision:
+    """Published optimal 4X/check action; deliberately makes no numeric EV claim."""
+    if state.board or state.dealer_visible is not None:
+        raise ValueError("reference opening requires an uninformed opening state")
+    return Decision(basic_opening_action(state.player), {}, 0.0, "PUBLISHED_OPTIMAL_STRATEGY",
+                    False, 0, 0.0)
 
 
 def solve(state: InformationState, **kwargs) -> Decision:

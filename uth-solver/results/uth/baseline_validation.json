@@ -1,12 +1,22 @@
 {
+  "average_action_passed": null,
   "confidence_interval_99_9": [
-    -0.05119490434213782,
-    -0.004745095657863473
+    -0.05194322811358358,
+    -0.005628771886416344
   ],
-  "difference": -0.0036700000000006484,
+  "consistent_with_ev_target": true,
+  "difference": -0.004485999999999966,
+  "eligible_for_exposed_edge": false,
+  "estimated_hands_for_99_9_half_width": {
+    "0.00025": 4290057712,
+    "0.0005": 1072514428,
+    "0.001": 268128607
+  },
   "metadata": {
-    "created_at": "2026-08-13T18:38:57.801877+00:00",
-    "git_commit": "2d136cb0d2f956d33f832f8d146603b91ed25895",
+    "confidence_method": "paired normal interval; finite-population correction for sampled flop states",
+    "created_at": "2026-08-13T19:27:38.467127+00:00",
+    "ev_unit": "net round profit in Ante units",
+    "git_commit": "b0b4fdd967c3984c9654ef24cb963fb5a736f67d",
     "paytable": {
       "flush": 1.5,
       "four_of_a_kind": 10.0,
@@ -16,50 +26,96 @@
       "straight": 1.0,
       "straight_flush": 50.0
     },
+    "policy_sha256": "3e6ac07b8c10c29badaf1079bbc9765d6af9ec5aefb955dd1c8f886996f4651f",
+    "python": "3.14.6",
+    "rng": "Python MT19937; parallel seeds derived by SplitMix64",
     "rules_version": "Wizard of Odds, accessed 2026-08-13; page updated 2026-08-03",
     "sample_count": 500000,
     "seed": 20260813,
-    "solver_version": "0.1.0"
+    "solver_version": "0.2.0"
   },
   "note": "basic validates Wizard's readable strategy (-2.43%), not the optimal -2.185% baseline",
-  "our_ev": -0.027970000000000647,
-  "standard_error": 0.00705811143239277,
-  "eligible_for_exposed_edge": false,
   "optimal_baseline_status": "NOT VALIDATED",
-  "status": "PASS",
+  "our_ev": -0.028785999999999964,
+  "parallelism": {
+    "deterministic": true,
+    "disjoint_prng_instances": true,
+    "stream_method": "splitmix64",
+    "stream_seeds": [
+      13604793195621473946,
+      11659246549464438061,
+      6193690098929164927,
+      12308432762469697198,
+      4005740211921626460,
+      3166027334268849483,
+      18153884239649349252,
+      5443295083424088938,
+      18423380111960422168,
+      9734694679086297578,
+      771436330119231615,
+      3175913703140873822,
+      11270713263995647143,
+      11844370769303688081,
+      17718694714138437668,
+      14405793537897586761,
+      7996782762894817549,
+      13193436089926472096,
+      283084283387929719,
+      1330007696390440506,
+      993220217517245739,
+      14474146207511975189,
+      5180995055211939186,
+      2686335758301858125,
+      5065826619566922263,
+      5217706173443749712,
+      2742215836413753955,
+      3236763314058578888,
+      7735541815273505627,
+      18175372952626625067,
+      9949652290880499609,
+      17815563956714058195
+    ],
+    "workers": 32
+  },
+  "precision_passed": false,
+  "sd_passed": null,
+  "standard_error": 0.007037544442948235,
+  "status": "CONSISTENT_BUT_UNDERPOWERED",
   "strategy": "basic",
   "summary": {
     "actions": {
-      "1X": 0.236906,
-      "2X": 0.214358,
-      "4X": 0.378244,
-      "FOLD": 0.170492
+      "1X": 0.23795,
+      "2X": 0.213982,
+      "4X": 0.376674,
+      "FOLD": 0.171394
     },
-    "average_play_wager": 2.178598,
-    "average_total_action": 4.178598,
-    "edge_vs_average_action": -0.0066936326490369845,
-    "ev_per_round": -0.027970000000000647,
-    "hands_per_second": 13767.599473480079,
-    "house_edge_vs_ante": 0.027970000000000647,
+    "average_play_wager": 2.17261,
+    "average_total_action": 4.172610000000001,
+    "edge_vs_average_action": -0.006898799552318563,
+    "ev_per_round": -0.028785999999999964,
+    "hands_per_second": 203915.94470510437,
+    "house_edge_vs_ante": 0.028785999999999964,
     "n0": null,
-    "player_edge_vs_ante": -0.027970000000000647,
-    "player_edge_vs_initial": -0.013985000000000324,
-    "runtime_seconds": 36.31715180000174,
-    "sd_per_round": 4.990838456215224,
+    "player_edge_vs_ante": -0.028785999999999964,
+    "player_edge_vs_initial": -0.014392999999999982,
+    "runtime_seconds": 2.451990700006718,
+    "sd_per_round": 4.976295398510401,
     "statistics": {
       "confidence": 0.999,
       "confidence_interval": [
-        -0.05119490434213782,
-        -0.004745095657863473
+        -0.05194322811358358,
+        -0.005628771886416344
       ],
       "count": 500000,
-      "half_width": 0.02322490434213717,
-      "mean": -0.027970000000000647,
-      "standard_error": 0.00705811143239277,
-      "variance": 24.90846849603676
+      "half_width": 0.023157228113583617,
+      "mean": -0.028785999999999964,
+      "standard_error": 0.007037544442948235,
+      "variance": 24.763515893235795
     },
-    "variance": 24.90846849603676
+    "variance": 24.763515893235795
   },
+  "wizard_average_total_action": 4.152252,
   "wizard_ev": -0.0243,
-  "wizard_optimal_ev": -0.02185
+  "wizard_optimal_ev": -0.02185,
+  "wizard_sd": 4.94
 }

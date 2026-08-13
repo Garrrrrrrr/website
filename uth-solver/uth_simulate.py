@@ -5,7 +5,7 @@ import json
 from pathlib import Path
 
 from uth.reports import metadata, write_json
-from uth.simulation import simulate
+from uth.simulation import simulate_parallel
 
 
 def main() -> None:
@@ -25,7 +25,7 @@ def main() -> None:
         if not validation.get("eligible_for_exposed_edge"):
             raise SystemExit("STOP: optimal baseline has not passed at the required precision; exposed-card edge calculation is gated. Use --allow-unvalidated only for development diagnostics.")
     result = {"metadata": metadata(args.hands, args.seed),
-              "result": simulate(args.mode, args.hands, args.seed, args.quality, args.opening_samples)}
+              "result": simulate_parallel(args.mode, args.hands, args.seed, args.quality, args.opening_samples, args.workers)}
     output = args.output or f"results/uth/{args.mode}.json"
     write_json(output, result)
     print(json.dumps(result, indent=2))

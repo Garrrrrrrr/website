@@ -29,9 +29,9 @@ the hidden dealer card, and every solver API accepts only the latter.
 - River: exact enumeration (44 exposed or 990 normal dealer holdings).
 - Flop: exact board-grouped backward induction (45,540 exposed or about 1.07M
   normal terminal assignments). Checking includes the optimal exact river choice.
-- Opening: paired sampling over flops, with exact conditional flop and river
-  children. Recommendations remain `INCONCLUSIVE` unless their paired 99.9% CI
-  excludes zero and has half-width at most 0.001.
+- Opening: paired, texture-stratified sampling without replacement over flop
+  information states, with exact conditional flop and river children. The
+  uncertainty calculation includes a finite-population correction.
 - The fast full-game runner uses Wizard's readable strategy and is suitable for
   plumbing/variance tests, not claims about perfect exposed-card play. `exact-late`
   invokes exact later decisions and is deliberately slower.
@@ -40,6 +40,9 @@ Wizard publishes optimal EV -0.02185/Ante, 4.152252 average total wager, 0.526%
 element of risk, and SD 4.94. Wizard's simpler chart returns about -0.0243/Ante.
 The validation artifact identifies which target was tested. No exposed-card edge
 should be promoted until a high-precision **optimal** baseline validation passes.
+Validation reports use `CONSISTENT_BUT_UNDERPOWERED` rather than `PASS` when the
+published target lies inside an interval that is still wider than the required
+0.001 Ante units. Optimal validation also checks average action and standard deviation.
 
 ## Commands
 
@@ -64,4 +67,6 @@ has passed with a 99.9% half-width no greater than 0.001. The explicit
 must not be reported as an exposed-card edge.
 
 Exports include rules version, paytable, sample count, seed, solver version, Git
-commit, confidence data, and runtime under `results/uth/`.
+commit, a policy hash, RNG/stream details, confidence method, and runtime under
+`results/uth/`. `--workers auto` uses deterministic SplitMix64-derived worker
+seeds and exact pooled-moment aggregation.
