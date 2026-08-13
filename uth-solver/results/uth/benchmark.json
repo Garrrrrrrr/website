@@ -1,0 +1,50 @@
+{
+  "all_core": "not implemented in Python reference runner",
+  "estimated_seconds": {
+    "100B": 6776665.999786928,
+    "100M": 6776.665999786928,
+    "10B": 677666.5999786928,
+    "10M": 677.6665999786928,
+    "1B": 67766.65999786928,
+    "1M": 67.76665999786928,
+    "1T": 67766659.99786928
+  },
+  "memory": "streaming O(1), caches excluded",
+  "metadata": {
+    "created_at": "2026-08-13T18:44:02.049672+00:00",
+    "git_commit": "2d136cb0d2f956d33f832f8d146603b91ed25895",
+    "paytable": {
+      "flush": 1.5,
+      "four_of_a_kind": 10.0,
+      "full_house": 3.0,
+      "other": 0.0,
+      "royal_flush": 500.0,
+      "straight": 1.0,
+      "straight_flush": 50.0
+    },
+    "rules_version": "Wizard of Odds, accessed 2026-08-13; page updated 2026-08-03",
+    "sample_count": 5000,
+    "seed": 20260813,
+    "solver_version": "0.1.0"
+  },
+  "rates": {
+    "complete_hands_per_second_single_core_basic": 14756.518914041832,
+    "flop": {
+      "seconds": 0.8222263999923598,
+      "states": 3,
+      "states_per_second": 3.64863010969713,
+      "terminal_outcomes": 136620,
+      "terminal_outcomes_per_second": 166158.6151956073
+    },
+    "preflop": {
+      "note": "sampled flops with exact children; state dependent"
+    },
+    "river": {
+      "seconds": 0.0007487000257242471,
+      "states": 3,
+      "states_per_second": 4006.9452343052635,
+      "terminal_outcomes": 132,
+      "terminal_outcomes_per_second": 176305.5903094316
+    }
+  }
+}
