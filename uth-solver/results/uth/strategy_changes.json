@@ -1,0 +1,2207 @@
+{
+  "changes": [
+    {
+      "board": [
+        "Qd",
+        "6h",
+        "Jc",
+        "4h",
+        "5c"
+      ],
+      "dealer_exposed": "Qs",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -2.3545454545454545,
+      "normal_action": "1X",
+      "normal_ev": 0.35454545454545455,
+      "normal_margin": 2.3545454545454545,
+      "player": [
+        "Jd",
+        "Kd"
+      ]
+    },
+    {
+      "board": [
+        "6c",
+        "3d",
+        "5d",
+        "Qs",
+        "Th"
+      ],
+      "dealer_exposed": "Qd",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.13434343434343443,
+      "normal_action": "1X",
+      "normal_ev": -1.8656565656565656,
+      "normal_margin": 0.13434343434343443,
+      "player": [
+        "Js",
+        "Kh"
+      ]
+    },
+    {
+      "board": [
+        "5c",
+        "Ac",
+        "7s",
+        "Th",
+        "Ah"
+      ],
+      "dealer_exposed": "4s",
+      "exposed_action": "1X",
+      "exposed_ev": -2.0,
+      "exposed_margin": 0.0,
+      "information_value": 0.0,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.6979797979797979,
+      "player": [
+        "6d",
+        "3d"
+      ]
+    },
+    {
+      "board": [
+        "Qc",
+        "6c",
+        "2s",
+        "4c",
+        "5s"
+      ],
+      "dealer_exposed": "3c",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -2.466666666666667,
+      "normal_action": "1X",
+      "normal_ev": 0.4666666666666667,
+      "normal_margin": 2.466666666666667,
+      "player": [
+        "2c",
+        "Qd"
+      ]
+    },
+    {
+      "board": [
+        "3s",
+        "5s",
+        "Qh",
+        "6d",
+        "Ah"
+      ],
+      "dealer_exposed": "6h",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.7777777777777777,
+      "normal_action": "1X",
+      "normal_ev": -1.2222222222222223,
+      "normal_margin": 0.7777777777777777,
+      "player": [
+        "3h",
+        "9c"
+      ]
+    },
+    {
+      "board": [
+        "8s",
+        "5h",
+        "8c",
+        "4s",
+        "Ah"
+      ],
+      "dealer_exposed": "Ac",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.8585858585858586,
+      "normal_action": "1X",
+      "normal_ev": -0.1414141414141414,
+      "normal_margin": 1.8585858585858586,
+      "player": [
+        "Ts",
+        "4c"
+      ]
+    },
+    {
+      "board": [
+        "Jc",
+        "Js",
+        "8h",
+        "Jd",
+        "Kh"
+      ],
+      "dealer_exposed": "Tc",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.32020202020202015,
+      "normal_action": "1X",
+      "normal_ev": -1.6797979797979798,
+      "normal_margin": 0.32020202020202015,
+      "player": [
+        "9d",
+        "4h"
+      ]
+    },
+    {
+      "board": [
+        "6c",
+        "8d",
+        "7c",
+        "Jc",
+        "3c"
+      ],
+      "dealer_exposed": "4c",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.294949494949495,
+      "normal_action": "1X",
+      "normal_ev": -0.705050505050505,
+      "normal_margin": 1.294949494949495,
+      "player": [
+        "9d",
+        "Jd"
+      ]
+    },
+    {
+      "board": [
+        "8d",
+        "7d",
+        "8s",
+        "2s",
+        "4c"
+      ],
+      "dealer_exposed": "5c",
+      "exposed_action": "1X",
+      "exposed_ev": -1.8863636363636365,
+      "exposed_margin": 0.11363636363636354,
+      "information_value": 0.11363636363636354,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.5484848484848484,
+      "player": [
+        "Th",
+        "5d"
+      ]
+    },
+    {
+      "board": [
+        "3c",
+        "3s",
+        "8h",
+        "9c",
+        "Ks"
+      ],
+      "dealer_exposed": "4h",
+      "exposed_action": "1X",
+      "exposed_ev": -1.9772727272727273,
+      "exposed_margin": 0.022727272727272707,
+      "information_value": 0.022727272727272707,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.6090909090909089,
+      "player": [
+        "5d",
+        "4s"
+      ]
+    },
+    {
+      "board": [
+        "Ts",
+        "Qh",
+        "7s",
+        "6h",
+        "4s"
+      ],
+      "dealer_exposed": "Kh",
+      "exposed_action": "1X",
+      "exposed_ev": -1.8863636363636365,
+      "exposed_margin": 0.11363636363636354,
+      "information_value": 0.11363636363636354,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.1020202020202019,
+      "player": [
+        "Ks",
+        "3c"
+      ]
+    },
+    {
+      "board": [
+        "4s",
+        "5c",
+        "7s",
+        "Qd",
+        "3c"
+      ],
+      "dealer_exposed": "4c",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.5030303030303029,
+      "normal_action": "1X",
+      "normal_ev": -1.496969696969697,
+      "normal_margin": 0.5030303030303029,
+      "player": [
+        "3s",
+        "Ah"
+      ]
+    },
+    {
+      "board": [
+        "Qc",
+        "3c",
+        "5d",
+        "Qs",
+        "Kd"
+      ],
+      "dealer_exposed": "Ac",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 0.5227272727272729,
+      "information_value": -1.1848484848484848,
+      "normal_action": "1X",
+      "normal_ev": -0.8151515151515152,
+      "normal_margin": 1.1848484848484848,
+      "player": [
+        "4h",
+        "As"
+      ]
+    },
+    {
+      "board": [
+        "Kc",
+        "8h",
+        "6d",
+        "Jd",
+        "3h"
+      ],
+      "dealer_exposed": "8d",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.8181818181818181,
+      "normal_action": "1X",
+      "normal_ev": -1.1818181818181819,
+      "normal_margin": 0.8181818181818181,
+      "player": [
+        "4h",
+        "3d"
+      ]
+    },
+    {
+      "board": [
+        "4d",
+        "2c",
+        "3s",
+        "Qd",
+        "9c"
+      ],
+      "dealer_exposed": "Qh",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.6464646464646464,
+      "normal_action": "1X",
+      "normal_ev": -0.35353535353535354,
+      "normal_margin": 1.6464646464646464,
+      "player": [
+        "4s",
+        "8d"
+      ]
+    },
+    {
+      "board": [
+        "7d",
+        "8h",
+        "2s",
+        "Ts",
+        "Ac"
+      ],
+      "dealer_exposed": "Ah",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.32020202020202015,
+      "normal_action": "1X",
+      "normal_ev": -1.6797979797979798,
+      "normal_margin": 0.32020202020202015,
+      "player": [
+        "Kd",
+        "6d"
+      ]
+    },
+    {
+      "board": [
+        "Ad",
+        "Kd",
+        "7d",
+        "Qc",
+        "3d"
+      ],
+      "dealer_exposed": "Kc",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.6090909090909091,
+      "normal_action": "1X",
+      "normal_ev": -1.3909090909090909,
+      "normal_margin": 0.6090909090909091,
+      "player": [
+        "Jh",
+        "Jc"
+      ]
+    },
+    {
+      "board": [
+        "Tc",
+        "Jd",
+        "3d",
+        "Qh",
+        "8s"
+      ],
+      "dealer_exposed": "7s",
+      "exposed_action": "1X",
+      "exposed_ev": -1.3409090909090908,
+      "exposed_margin": 0.6590909090909092,
+      "information_value": 0.6590909090909092,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.16868686868686877,
+      "player": [
+        "4c",
+        "Kd"
+      ]
+    },
+    {
+      "board": [
+        "Jh",
+        "5d",
+        "7d",
+        "Qd",
+        "9s"
+      ],
+      "dealer_exposed": "Th",
+      "exposed_action": "1X",
+      "exposed_ev": -1.5454545454545454,
+      "exposed_margin": 0.4545454545454546,
+      "information_value": 0.4545454545454546,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.059595959595959425,
+      "player": [
+        "3c",
+        "Kc"
+      ]
+    },
+    {
+      "board": [
+        "Ks",
+        "5c",
+        "9c",
+        "8c",
+        "Ts"
+      ],
+      "dealer_exposed": "9s",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.19090909090909092,
+      "normal_action": "1X",
+      "normal_ev": -1.809090909090909,
+      "normal_margin": 0.19090909090909092,
+      "player": [
+        "2s",
+        "Ac"
+      ]
+    },
+    {
+      "board": [
+        "Tc",
+        "9c",
+        "6s",
+        "8s",
+        "8h"
+      ],
+      "dealer_exposed": "Th",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.9222222222222223,
+      "normal_action": "1X",
+      "normal_ev": -0.07777777777777778,
+      "normal_margin": 1.9222222222222223,
+      "player": [
+        "Ks",
+        "9d"
+      ]
+    },
+    {
+      "board": [
+        "7c",
+        "7d",
+        "2c",
+        "Kd",
+        "Ts"
+      ],
+      "dealer_exposed": "7h",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.9353535353535354,
+      "normal_action": "1X",
+      "normal_ev": -0.06464646464646465,
+      "normal_margin": 1.9353535353535354,
+      "player": [
+        "Qs",
+        "2h"
+      ]
+    },
+    {
+      "board": [
+        "Qd",
+        "Ad",
+        "7c",
+        "6c",
+        "Qs"
+      ],
+      "dealer_exposed": "2c",
+      "exposed_action": "1X",
+      "exposed_ev": -1.0909090909090908,
+      "exposed_margin": 0.9090909090909092,
+      "information_value": 0.9090909090909092,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.13636363636363624,
+      "player": [
+        "5s",
+        "9h"
+      ]
+    },
+    {
+      "board": [
+        "9d",
+        "7s",
+        "Ad",
+        "Th",
+        "4c"
+      ],
+      "dealer_exposed": "3d",
+      "exposed_action": "1X",
+      "exposed_ev": -1.9772727272727273,
+      "exposed_margin": 0.022727272727272707,
+      "information_value": 0.022727272727272707,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.5565656565656565,
+      "player": [
+        "3s",
+        "5c"
+      ]
+    },
+    {
+      "board": [
+        "Jc",
+        "Kd",
+        "6h",
+        "2s",
+        "8s"
+      ],
+      "dealer_exposed": "8c",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.3333333333333335,
+      "normal_action": "1X",
+      "normal_ev": -0.6666666666666666,
+      "normal_margin": 1.3333333333333335,
+      "player": [
+        "6s",
+        "5d"
+      ]
+    },
+    {
+      "board": [
+        "7h",
+        "7s",
+        "Jc",
+        "6c",
+        "4s"
+      ],
+      "dealer_exposed": "7d",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -2.4979797979797977,
+      "normal_action": "1X",
+      "normal_ev": 0.49797979797979797,
+      "normal_margin": 2.4979797979797977,
+      "player": [
+        "Qs",
+        "6d"
+      ]
+    },
+    {
+      "board": [
+        "5c",
+        "6s",
+        "8s",
+        "Qc",
+        "4h"
+      ],
+      "dealer_exposed": "6d",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.30000000000000004,
+      "normal_action": "1X",
+      "normal_ev": -1.7,
+      "normal_margin": 0.30000000000000004,
+      "player": [
+        "4s",
+        "2h"
+      ]
+    },
+    {
+      "board": [
+        "5c",
+        "Ad",
+        "Kd",
+        "7d",
+        "2c"
+      ],
+      "dealer_exposed": "Tc",
+      "exposed_action": "1X",
+      "exposed_ev": -1.1136363636363635,
+      "exposed_margin": 0.8863636363636365,
+      "information_value": 0.8863636363636365,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.016161616161616266,
+      "player": [
+        "Jh",
+        "3h"
+      ]
+    },
+    {
+      "board": [
+        "5d",
+        "2c",
+        "Tc",
+        "Jh",
+        "7d"
+      ],
+      "dealer_exposed": "2h",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.42121212121212115,
+      "normal_action": "1X",
+      "normal_ev": -1.5787878787878789,
+      "normal_margin": 0.42121212121212115,
+      "player": [
+        "8h",
+        "Ah"
+      ]
+    },
+    {
+      "board": [
+        "Ts",
+        "5s",
+        "9c",
+        "3s",
+        "Kc"
+      ],
+      "dealer_exposed": "9h",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.1686868686868688,
+      "normal_action": "1X",
+      "normal_ev": -0.8313131313131313,
+      "normal_margin": 1.1686868686868688,
+      "player": [
+        "5c",
+        "8c"
+      ]
+    },
+    {
+      "board": [
+        "9c",
+        "Qh",
+        "Ks",
+        "Ad",
+        "Kc"
+      ],
+      "dealer_exposed": "Ah",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -2.6848484848484846,
+      "normal_action": "1X",
+      "normal_ev": 0.6848484848484848,
+      "normal_margin": 2.6848484848484846,
+      "player": [
+        "5s",
+        "Qc"
+      ]
+    },
+    {
+      "board": [
+        "2d",
+        "7d",
+        "8c",
+        "8s",
+        "4h"
+      ],
+      "dealer_exposed": "Ac",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.7646464646464646,
+      "normal_action": "1X",
+      "normal_ev": -1.2353535353535354,
+      "normal_margin": 0.7646464646464646,
+      "player": [
+        "Ts",
+        "Kc"
+      ]
+    },
+    {
+      "board": [
+        "6s",
+        "4d",
+        "9d",
+        "9c",
+        "9s"
+      ],
+      "dealer_exposed": "As",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.4414141414141415,
+      "normal_action": "1X",
+      "normal_ev": -1.5585858585858585,
+      "normal_margin": 0.4414141414141415,
+      "player": [
+        "Jh",
+        "Ts"
+      ]
+    },
+    {
+      "board": [
+        "4s",
+        "8s",
+        "8d",
+        "5h",
+        "2d"
+      ],
+      "dealer_exposed": "5c",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.2898989898989899,
+      "normal_action": "1X",
+      "normal_ev": -0.7101010101010101,
+      "normal_margin": 1.2898989898989899,
+      "player": [
+        "Qh",
+        "Ad"
+      ]
+    },
+    {
+      "board": [
+        "4d",
+        "Ah",
+        "2d",
+        "Td",
+        "6d"
+      ],
+      "dealer_exposed": "Ad",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -4.9803030303030305,
+      "normal_action": "1X",
+      "normal_ev": 2.9803030303030305,
+      "normal_margin": 4.9803030303030305,
+      "player": [
+        "Kd",
+        "Qs"
+      ]
+    },
+    {
+      "board": [
+        "4d",
+        "Td",
+        "6c",
+        "9h",
+        "2d"
+      ],
+      "dealer_exposed": "Tc",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.481818181818182,
+      "normal_action": "1X",
+      "normal_ev": -0.5181818181818182,
+      "normal_margin": 1.481818181818182,
+      "player": [
+        "3c",
+        "6d"
+      ]
+    },
+    {
+      "board": [
+        "Tc",
+        "Ts",
+        "Qh",
+        "4c",
+        "Ac"
+      ],
+      "dealer_exposed": "As",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.7626262626262625,
+      "normal_action": "1X",
+      "normal_ev": -0.23737373737373738,
+      "normal_margin": 1.7626262626262625,
+      "player": [
+        "4s",
+        "6d"
+      ]
+    },
+    {
+      "board": [
+        "7d",
+        "Js",
+        "2h",
+        "4s",
+        "Qh"
+      ],
+      "dealer_exposed": "8c",
+      "exposed_action": "1X",
+      "exposed_ev": -1.6590909090909092,
+      "exposed_margin": 0.34090909090909083,
+      "information_value": 0.34090909090909083,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.2575757575757578,
+      "player": [
+        "9c",
+        "6s"
+      ]
+    },
+    {
+      "board": [
+        "7s",
+        "Ac",
+        "2d",
+        "4c",
+        "Ks"
+      ],
+      "dealer_exposed": "2c",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.312121212121212,
+      "normal_action": "1X",
+      "normal_ev": -1.687878787878788,
+      "normal_margin": 0.312121212121212,
+      "player": [
+        "3h",
+        "Qs"
+      ]
+    },
+    {
+      "board": [
+        "Td",
+        "9d",
+        "5s",
+        "7d",
+        "8c"
+      ],
+      "dealer_exposed": "Js",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.6787878787878787,
+      "normal_action": "1X",
+      "normal_ev": -0.3212121212121212,
+      "normal_margin": 1.6787878787878787,
+      "player": [
+        "8d",
+        "5c"
+      ]
+    },
+    {
+      "board": [
+        "9s",
+        "3h",
+        "4d",
+        "Ts",
+        "Qc"
+      ],
+      "dealer_exposed": "Qd",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.1828282828282828,
+      "normal_action": "1X",
+      "normal_ev": -0.8171717171717172,
+      "normal_margin": 1.1828282828282828,
+      "player": [
+        "4s",
+        "6c"
+      ]
+    },
+    {
+      "board": [
+        "Ts",
+        "5s",
+        "9c",
+        "Jh",
+        "7d"
+      ],
+      "dealer_exposed": "6s",
+      "exposed_action": "1X",
+      "exposed_ev": -1.9772727272727273,
+      "exposed_margin": 0.022727272727272707,
+      "information_value": 0.022727272727272707,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.5363636363636362,
+      "player": [
+        "6d",
+        "3c"
+      ]
+    },
+    {
+      "board": [
+        "Qc",
+        "4c",
+        "4s",
+        "2h",
+        "Td"
+      ],
+      "dealer_exposed": "Th",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.7848484848484849,
+      "normal_action": "1X",
+      "normal_ev": -1.215151515151515,
+      "normal_margin": 0.7848484848484849,
+      "player": [
+        "Ks",
+        "8c"
+      ]
+    },
+    {
+      "board": [
+        "Qh",
+        "7h",
+        "9d",
+        "6h",
+        "9c"
+      ],
+      "dealer_exposed": "7s",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.028282828282828243,
+      "normal_action": "1X",
+      "normal_ev": -1.9717171717171718,
+      "normal_margin": 0.028282828282828243,
+      "player": [
+        "5s",
+        "Js"
+      ]
+    },
+    {
+      "board": [
+        "Js",
+        "7d",
+        "7s",
+        "6c",
+        "8s"
+      ],
+      "dealer_exposed": "Jc",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.8888888888888888,
+      "normal_action": "1X",
+      "normal_ev": -1.1111111111111112,
+      "normal_margin": 0.8888888888888888,
+      "player": [
+        "2c",
+        "As"
+      ]
+    },
+    {
+      "board": [
+        "5h",
+        "9c",
+        "Jc",
+        "6h",
+        "8h"
+      ],
+      "dealer_exposed": "7d",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.016161616161616266,
+      "normal_action": "1X",
+      "normal_ev": -1.9838383838383837,
+      "normal_margin": 0.016161616161616266,
+      "player": [
+        "Qh",
+        "Ad"
+      ]
+    },
+    {
+      "board": [
+        "5s",
+        "9c",
+        "9s",
+        "4d",
+        "7c"
+      ],
+      "dealer_exposed": "9h",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.411111111111111,
+      "normal_action": "1X",
+      "normal_ev": -0.5888888888888889,
+      "normal_margin": 1.411111111111111,
+      "player": [
+        "Kc",
+        "As"
+      ]
+    },
+    {
+      "board": [
+        "8c",
+        "Jc",
+        "7h",
+        "Kh",
+        "Ad"
+      ],
+      "dealer_exposed": "Ah",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.8191919191919192,
+      "normal_action": "1X",
+      "normal_ev": -0.1808080808080808,
+      "normal_margin": 1.8191919191919192,
+      "player": [
+        "Js",
+        "2c"
+      ]
+    },
+    {
+      "board": [
+        "7c",
+        "Jd",
+        "Ts",
+        "As",
+        "8h"
+      ],
+      "dealer_exposed": "3h",
+      "exposed_action": "1X",
+      "exposed_ev": -1.8636363636363635,
+      "exposed_margin": 0.13636363636363646,
+      "information_value": 0.13636363636363646,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.46363636363636385,
+      "player": [
+        "2h",
+        "5h"
+      ]
+    },
+    {
+      "board": [
+        "Ks",
+        "5d",
+        "4h",
+        "Jd",
+        "Ac"
+      ],
+      "dealer_exposed": "3d",
+      "exposed_action": "1X",
+      "exposed_ev": -1.7954545454545454,
+      "exposed_margin": 0.20454545454545459,
+      "information_value": 0.20454545454545459,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.37070707070707076,
+      "player": [
+        "2d",
+        "8c"
+      ]
+    },
+    {
+      "board": [
+        "Qc",
+        "3c",
+        "4c",
+        "Ah",
+        "8h"
+      ],
+      "dealer_exposed": "Ad",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.23131313131313136,
+      "normal_action": "1X",
+      "normal_ev": -1.7686868686868686,
+      "normal_margin": 0.23131313131313136,
+      "player": [
+        "2s",
+        "Kc"
+      ]
+    },
+    {
+      "board": [
+        "5d",
+        "2c",
+        "8d",
+        "Th",
+        "Tc"
+      ],
+      "dealer_exposed": "4c",
+      "exposed_action": "1X",
+      "exposed_ev": -1.4090909090909092,
+      "exposed_margin": 0.5909090909090908,
+      "information_value": 0.5909090909090908,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.3666666666666667,
+      "player": [
+        "7s",
+        "9h"
+      ]
+    },
+    {
+      "board": [
+        "Ks",
+        "9h",
+        "3c",
+        "Ad",
+        "9c"
+      ],
+      "dealer_exposed": "Qh",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.8212121212121213,
+      "normal_action": "1X",
+      "normal_ev": -1.1787878787878787,
+      "normal_margin": 0.8212121212121213,
+      "player": [
+        "Jh",
+        "8s"
+      ]
+    },
+    {
+      "board": [
+        "7d",
+        "7c",
+        "Jd",
+        "9d",
+        "Ts"
+      ],
+      "dealer_exposed": "7s",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.8565656565656565,
+      "normal_action": "1X",
+      "normal_ev": -1.1434343434343435,
+      "normal_margin": 0.8565656565656565,
+      "player": [
+        "5s",
+        "5c"
+      ]
+    },
+    {
+      "board": [
+        "Jc",
+        "Kc",
+        "5c",
+        "Qc",
+        "Th"
+      ],
+      "dealer_exposed": "4d",
+      "exposed_action": "1X",
+      "exposed_ev": -1.3636363636363635,
+      "exposed_margin": 0.6363636363636365,
+      "information_value": 0.6363636363636365,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.3666666666666667,
+      "player": [
+        "8h",
+        "5h"
+      ]
+    },
+    {
+      "board": [
+        "8s",
+        "Kd",
+        "5s",
+        "Ac",
+        "8h"
+      ],
+      "dealer_exposed": "Ks",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.403030303030303,
+      "normal_action": "1X",
+      "normal_ev": -0.5969696969696969,
+      "normal_margin": 1.403030303030303,
+      "player": [
+        "3s",
+        "Qd"
+      ]
+    },
+    {
+      "board": [
+        "4h",
+        "8s",
+        "2d",
+        "5c",
+        "Qs"
+      ],
+      "dealer_exposed": "5h",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.2636363636363637,
+      "normal_action": "1X",
+      "normal_ev": -0.7363636363636363,
+      "normal_margin": 1.2636363636363637,
+      "player": [
+        "Kc",
+        "4d"
+      ]
+    },
+    {
+      "board": [
+        "Tc",
+        "As",
+        "Th",
+        "6d",
+        "8c"
+      ],
+      "dealer_exposed": "8s",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.213131313131313,
+      "normal_action": "1X",
+      "normal_ev": -0.7868686868686868,
+      "normal_margin": 1.213131313131313,
+      "player": [
+        "Kd",
+        "4s"
+      ]
+    },
+    {
+      "board": [
+        "Jd",
+        "Td",
+        "3d",
+        "Ts",
+        "Kh"
+      ],
+      "dealer_exposed": "Ac",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.25454545454545463,
+      "normal_action": "1X",
+      "normal_ev": -1.7454545454545454,
+      "normal_margin": 0.25454545454545463,
+      "player": [
+        "2d",
+        "9h"
+      ]
+    },
+    {
+      "board": [
+        "7c",
+        "4c",
+        "Qs",
+        "Js",
+        "Ts"
+      ],
+      "dealer_exposed": "Qc",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.6575757575757577,
+      "normal_action": "1X",
+      "normal_ev": -0.3424242424242424,
+      "normal_margin": 1.6575757575757577,
+      "player": [
+        "Td",
+        "8s"
+      ]
+    },
+    {
+      "board": [
+        "4s",
+        "Kd",
+        "Qd",
+        "9s",
+        "Jh"
+      ],
+      "dealer_exposed": "2c",
+      "exposed_action": "1X",
+      "exposed_ev": -1.6136363636363635,
+      "exposed_margin": 0.38636363636363646,
+      "information_value": 0.38636363636363646,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.36262626262626263,
+      "player": [
+        "6c",
+        "7d"
+      ]
+    },
+    {
+      "board": [
+        "5s",
+        "Tc",
+        "Qc",
+        "9d",
+        "Th"
+      ],
+      "dealer_exposed": "9s",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.7242424242424241,
+      "normal_action": "1X",
+      "normal_ev": -1.2757575757575759,
+      "normal_margin": 0.7242424242424241,
+      "player": [
+        "8s",
+        "Kd"
+      ]
+    },
+    {
+      "board": [
+        "7d",
+        "Ac",
+        "Th",
+        "5s",
+        "9c"
+      ],
+      "dealer_exposed": "Tc",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.13030303030303036,
+      "normal_action": "1X",
+      "normal_ev": -1.8696969696969696,
+      "normal_margin": 0.13030303030303036,
+      "player": [
+        "Qh",
+        "8s"
+      ]
+    },
+    {
+      "board": [
+        "2s",
+        "5d",
+        "8c",
+        "Qc",
+        "8d"
+      ],
+      "dealer_exposed": "8h",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -3.5131313131313133,
+      "normal_action": "1X",
+      "normal_ev": 1.513131313131313,
+      "normal_margin": 3.5131313131313133,
+      "player": [
+        "As",
+        "Ad"
+      ]
+    },
+    {
+      "board": [
+        "Jh",
+        "8h",
+        "Ks",
+        "Th",
+        "Ts"
+      ],
+      "dealer_exposed": "8d",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.0525252525252524,
+      "normal_action": "1X",
+      "normal_ev": -0.9474747474747475,
+      "normal_margin": 1.0525252525252524,
+      "player": [
+        "Ad",
+        "2c"
+      ]
+    },
+    {
+      "board": [
+        "Ks",
+        "6s",
+        "4h",
+        "6c",
+        "8h"
+      ],
+      "dealer_exposed": "8s",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.6515151515151516,
+      "normal_action": "1X",
+      "normal_ev": -1.3484848484848484,
+      "normal_margin": 0.6515151515151516,
+      "player": [
+        "Qc",
+        "7c"
+      ]
+    },
+    {
+      "board": [
+        "6s",
+        "Jc",
+        "2h",
+        "5c",
+        "4h"
+      ],
+      "dealer_exposed": "Jh",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.4575757575757575,
+      "normal_action": "1X",
+      "normal_ev": -0.5424242424242425,
+      "normal_margin": 1.4575757575757575,
+      "player": [
+        "7h",
+        "6d"
+      ]
+    },
+    {
+      "board": [
+        "8h",
+        "Qh",
+        "8s",
+        "6s",
+        "3s"
+      ],
+      "dealer_exposed": "5d",
+      "exposed_action": "1X",
+      "exposed_ev": -2.0,
+      "exposed_margin": 0.0,
+      "information_value": 0.0,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.7222222222222223,
+      "player": [
+        "7c",
+        "4h"
+      ]
+    },
+    {
+      "board": [
+        "5d",
+        "2d",
+        "2s",
+        "Ks",
+        "Td"
+      ],
+      "dealer_exposed": "Kd",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.6787878787878787,
+      "normal_action": "1X",
+      "normal_ev": -1.3212121212121213,
+      "normal_margin": 0.6787878787878787,
+      "player": [
+        "Qd",
+        "7c"
+      ]
+    },
+    {
+      "board": [
+        "4h",
+        "6h",
+        "9d",
+        "4d",
+        "Js"
+      ],
+      "dealer_exposed": "5c",
+      "exposed_action": "1X",
+      "exposed_ev": -1.4318181818181819,
+      "exposed_margin": 0.5681818181818181,
+      "information_value": 0.5681818181818181,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.43939393939393945,
+      "player": [
+        "8s",
+        "5h"
+      ]
+    },
+    {
+      "board": [
+        "3d",
+        "Js",
+        "5d",
+        "2h",
+        "Ks"
+      ],
+      "dealer_exposed": "5s",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.1363636363636362,
+      "normal_action": "1X",
+      "normal_ev": -0.8636363636363636,
+      "normal_margin": 1.1363636363636362,
+      "player": [
+        "3s",
+        "7h"
+      ]
+    },
+    {
+      "board": [
+        "7c",
+        "3h",
+        "2s",
+        "4h",
+        "4d"
+      ],
+      "dealer_exposed": "8d",
+      "exposed_action": "1X",
+      "exposed_ev": -1.75,
+      "exposed_margin": 0.25,
+      "information_value": 0.25,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.5484848484848484,
+      "player": [
+        "Td",
+        "6s"
+      ]
+    },
+    {
+      "board": [
+        "Ah",
+        "Kd",
+        "6d",
+        "9d",
+        "4c"
+      ],
+      "dealer_exposed": "4s",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.3111111111111111,
+      "normal_action": "1X",
+      "normal_ev": -1.6888888888888889,
+      "normal_margin": 0.3111111111111111,
+      "player": [
+        "2c",
+        "Qh"
+      ]
+    },
+    {
+      "board": [
+        "Th",
+        "Ts",
+        "4c",
+        "3h",
+        "4h"
+      ],
+      "dealer_exposed": "Ad",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.17979797979797985,
+      "normal_action": "1X",
+      "normal_ev": -1.8202020202020202,
+      "normal_margin": 0.17979797979797985,
+      "player": [
+        "9d",
+        "6d"
+      ]
+    },
+    {
+      "board": [
+        "6h",
+        "9h",
+        "9c",
+        "7h",
+        "Jd"
+      ],
+      "dealer_exposed": "6c",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.4424242424242424,
+      "normal_action": "1X",
+      "normal_ev": -1.5575757575757576,
+      "normal_margin": 0.4424242424242424,
+      "player": [
+        "Ks",
+        "3s"
+      ]
+    },
+    {
+      "board": [
+        "Js",
+        "2d",
+        "7c",
+        "Qh",
+        "6h"
+      ],
+      "dealer_exposed": "4s",
+      "exposed_action": "1X",
+      "exposed_ev": -1.7045454545454546,
+      "exposed_margin": 0.2954545454545454,
+      "information_value": 0.2954545454545454,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.41515151515151505,
+      "player": [
+        "8d",
+        "4h"
+      ]
+    },
+    {
+      "board": [
+        "Qs",
+        "Ah",
+        "Tc",
+        "Qc",
+        "3d"
+      ],
+      "dealer_exposed": "Ad",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.3666666666666667,
+      "normal_action": "1X",
+      "normal_ev": -0.6333333333333333,
+      "normal_margin": 1.3666666666666667,
+      "player": [
+        "7d",
+        "Kh"
+      ]
+    },
+    {
+      "board": [
+        "2d",
+        "8s",
+        "9h",
+        "6c",
+        "5d"
+      ],
+      "dealer_exposed": "Tc",
+      "exposed_action": "1X",
+      "exposed_ev": -1.4772727272727273,
+      "exposed_margin": 0.5227272727272727,
+      "information_value": 0.5227272727272727,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.2777777777777777,
+      "player": [
+        "3s",
+        "Kd"
+      ]
+    },
+    {
+      "board": [
+        "Ks",
+        "Kd",
+        "3c",
+        "8s",
+        "Tc"
+      ],
+      "dealer_exposed": "Td",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.2838383838383838,
+      "normal_action": "1X",
+      "normal_ev": -1.7161616161616162,
+      "normal_margin": 0.2838383838383838,
+      "player": [
+        "2c",
+        "Jc"
+      ]
+    },
+    {
+      "board": [
+        "2c",
+        "Kd",
+        "Qh",
+        "Js",
+        "5c"
+      ],
+      "dealer_exposed": "8s",
+      "exposed_action": "1X",
+      "exposed_ev": -1.3863636363636365,
+      "exposed_margin": 0.6136363636363635,
+      "information_value": 0.6136363636363635,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.06767676767676756,
+      "player": [
+        "7h",
+        "9d"
+      ]
+    },
+    {
+      "board": [
+        "Kh",
+        "Qc",
+        "Jd",
+        "As",
+        "6h"
+      ],
+      "dealer_exposed": "Ad",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.0303030303030303,
+      "normal_action": "1X",
+      "normal_ev": -0.9696969696969697,
+      "normal_margin": 1.0303030303030303,
+      "player": [
+        "3d",
+        "Jh"
+      ]
+    },
+    {
+      "board": [
+        "4c",
+        "5c",
+        "Ah",
+        "Tc",
+        "Jh"
+      ],
+      "dealer_exposed": "9s",
+      "exposed_action": "1X",
+      "exposed_ev": -1.1136363636363635,
+      "exposed_margin": 0.8863636363636365,
+      "information_value": 0.8863636363636365,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.017171717171717393,
+      "player": [
+        "3d",
+        "Qc"
+      ]
+    },
+    {
+      "board": [
+        "3h",
+        "6c",
+        "Ad",
+        "5h",
+        "2c"
+      ],
+      "dealer_exposed": "4c",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.708080808080808,
+      "normal_action": "1X",
+      "normal_ev": -0.2919191919191919,
+      "normal_margin": 1.708080808080808,
+      "player": [
+        "Qs",
+        "6s"
+      ]
+    },
+    {
+      "board": [
+        "Kh",
+        "3h",
+        "7s",
+        "6c",
+        "2h"
+      ],
+      "dealer_exposed": "9s",
+      "exposed_action": "1X",
+      "exposed_ev": -1.4318181818181819,
+      "exposed_margin": 0.5681818181818181,
+      "information_value": 0.5681818181818181,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.3212121212121213,
+      "player": [
+        "9d",
+        "Th"
+      ]
+    },
+    {
+      "board": [
+        "3h",
+        "6h",
+        "9h",
+        "Jd",
+        "7c"
+      ],
+      "dealer_exposed": "Qs",
+      "exposed_action": "1X",
+      "exposed_ev": -1.4318181818181819,
+      "exposed_margin": 0.5681818181818181,
+      "information_value": 0.5681818181818181,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.2585858585858585,
+      "player": [
+        "8d",
+        "Qc"
+      ]
+    },
+    {
+      "board": [
+        "Ah",
+        "9h",
+        "3s",
+        "9c",
+        "5s"
+      ],
+      "dealer_exposed": "Qs",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.1141414141414141,
+      "normal_action": "1X",
+      "normal_ev": -1.885858585858586,
+      "normal_margin": 0.1141414141414141,
+      "player": [
+        "Jc",
+        "2c"
+      ]
+    },
+    {
+      "board": [
+        "Qc",
+        "4h",
+        "Th",
+        "2h",
+        "4s"
+      ],
+      "dealer_exposed": "3c",
+      "exposed_action": "1X",
+      "exposed_ev": -2.0,
+      "exposed_margin": 0.0,
+      "information_value": 0.0,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.7222222222222223,
+      "player": [
+        "6d",
+        "7s"
+      ]
+    },
+    {
+      "board": [
+        "9s",
+        "Jc",
+        "3s",
+        "9h",
+        "Tc"
+      ],
+      "dealer_exposed": "Js",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.1080808080808082,
+      "normal_action": "1X",
+      "normal_ev": -0.8919191919191919,
+      "normal_margin": 1.1080808080808082,
+      "player": [
+        "7s",
+        "As"
+      ]
+    },
+    {
+      "board": [
+        "2h",
+        "Td",
+        "9d",
+        "Kc",
+        "3h"
+      ],
+      "dealer_exposed": "5h",
+      "exposed_action": "1X",
+      "exposed_ev": -1.3863636363636365,
+      "exposed_margin": 0.6136363636363635,
+      "information_value": 0.6136363636363635,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.16060606060606064,
+      "player": [
+        "Jd",
+        "4h"
+      ]
+    },
+    {
+      "board": [
+        "7s",
+        "8d",
+        "2s",
+        "As",
+        "8s"
+      ],
+      "dealer_exposed": "6s",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.7898989898989899,
+      "normal_action": "1X",
+      "normal_ev": -0.2101010101010101,
+      "normal_margin": 1.7898989898989899,
+      "player": [
+        "Kh",
+        "Ad"
+      ]
+    },
+    {
+      "board": [
+        "Ac",
+        "Ah",
+        "6c",
+        "5h",
+        "Ks"
+      ],
+      "dealer_exposed": "Kh",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.2212121212121212,
+      "normal_action": "1X",
+      "normal_ev": -0.7787878787878788,
+      "normal_margin": 1.2212121212121212,
+      "player": [
+        "4d",
+        "Qh"
+      ]
+    },
+    {
+      "board": [
+        "Js",
+        "Qh",
+        "7s",
+        "Ac",
+        "Qc"
+      ],
+      "dealer_exposed": "Ts",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.32020202020202015,
+      "normal_action": "1X",
+      "normal_ev": -1.6797979797979798,
+      "normal_margin": 0.32020202020202015,
+      "player": [
+        "5d",
+        "9c"
+      ]
+    },
+    {
+      "board": [
+        "Kd",
+        "8c",
+        "6h",
+        "4d",
+        "Kh"
+      ],
+      "dealer_exposed": "Ts",
+      "exposed_action": "1X",
+      "exposed_ev": -1.4318181818181819,
+      "exposed_margin": 0.5681818181818181,
+      "information_value": 0.5681818181818181,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.12424242424242404,
+      "player": [
+        "Th",
+        "7s"
+      ]
+    },
+    {
+      "board": [
+        "6c",
+        "9s",
+        "Kd",
+        "Kc",
+        "2c"
+      ],
+      "dealer_exposed": "7d",
+      "exposed_action": "1X",
+      "exposed_ev": -1.75,
+      "exposed_margin": 0.25,
+      "information_value": 0.25,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.49696969696969706,
+      "player": [
+        "8h",
+        "4c"
+      ]
+    },
+    {
+      "board": [
+        "Qc",
+        "2s",
+        "6d",
+        "4c",
+        "Kc"
+      ],
+      "dealer_exposed": "Kh",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.885858585858586,
+      "normal_action": "1X",
+      "normal_ev": -0.11414141414141414,
+      "normal_margin": 1.885858585858586,
+      "player": [
+        "Tc",
+        "Ts"
+      ]
+    },
+    {
+      "board": [
+        "4d",
+        "9d",
+        "2c",
+        "As",
+        "9c"
+      ],
+      "dealer_exposed": "Ah",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.898989898989899,
+      "normal_action": "1X",
+      "normal_ev": -0.10101010101010101,
+      "normal_margin": 1.898989898989899,
+      "player": [
+        "5s",
+        "2h"
+      ]
+    },
+    {
+      "board": [
+        "4s",
+        "As",
+        "Ks",
+        "Qc",
+        "9d"
+      ],
+      "dealer_exposed": "4h",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.10606060606060597,
+      "normal_action": "1X",
+      "normal_ev": -1.893939393939394,
+      "normal_margin": 0.10606060606060597,
+      "player": [
+        "3d",
+        "Th"
+      ]
+    },
+    {
+      "board": [
+        "Js",
+        "6c",
+        "4h",
+        "2c",
+        "Jh"
+      ],
+      "dealer_exposed": "6d",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.3101010101010102,
+      "normal_action": "1X",
+      "normal_ev": -0.6898989898989899,
+      "normal_margin": 1.3101010101010102,
+      "player": [
+        "Ad",
+        "9s"
+      ]
+    },
+    {
+      "board": [
+        "5h",
+        "Jd",
+        "9d",
+        "As",
+        "4d"
+      ],
+      "dealer_exposed": "Ad",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.617171717171717,
+      "normal_action": "1X",
+      "normal_ev": -0.38282828282828285,
+      "normal_margin": 1.617171717171717,
+      "player": [
+        "2c",
+        "9h"
+      ]
+    },
+    {
+      "board": [
+        "3c",
+        "9d",
+        "Kd",
+        "Td",
+        "Ac"
+      ],
+      "dealer_exposed": "Tc",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.8575757575757577,
+      "normal_action": "1X",
+      "normal_ev": -1.1424242424242423,
+      "normal_margin": 0.8575757575757577,
+      "player": [
+        "4h",
+        "4c"
+      ]
+    },
+    {
+      "board": [
+        "Ks",
+        "9h",
+        "5c",
+        "7d",
+        "5d"
+      ],
+      "dealer_exposed": "Qc",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.22323232323232323,
+      "normal_action": "1X",
+      "normal_ev": -1.7767676767676768,
+      "normal_margin": 0.22323232323232323,
+      "player": [
+        "Js",
+        "6h"
+      ]
+    },
+    {
+      "board": [
+        "Jc",
+        "Qs",
+        "Ad",
+        "7c",
+        "5s"
+      ],
+      "dealer_exposed": "Qc",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -1.5404040404040404,
+      "normal_action": "1X",
+      "normal_ev": -0.4595959595959596,
+      "normal_margin": 1.5404040404040404,
+      "player": [
+        "Kd",
+        "7h"
+      ]
+    },
+    {
+      "board": [
+        "Js",
+        "6d",
+        "Ah",
+        "3d",
+        "6c"
+      ],
+      "dealer_exposed": "Kh",
+      "exposed_action": "FOLD",
+      "exposed_ev": -2.0,
+      "exposed_margin": 1.0,
+      "information_value": -0.8212121212121213,
+      "normal_action": "1X",
+      "normal_ev": -1.1787878787878787,
+      "normal_margin": 0.8212121212121213,
+      "player": [
+        "Qh",
+        "8c"
+      ]
+    },
+    {
+      "board": [
+        "3d",
+        "Kh",
+        "5s",
+        "2d",
+        "7d"
+      ],
+      "dealer_exposed": "4c",
+      "exposed_action": "1X",
+      "exposed_ev": -1.6363636363636365,
+      "exposed_margin": 0.36363636363636354,
+      "information_value": 0.36363636363636354,
+      "normal_action": "FOLD",
+      "normal_ev": -2.0,
+      "normal_margin": 0.21818181818181825,
+      "player": [
+        "8h",
+        "Jc"
+      ]
+    }
+  ],
+  "metadata": {
+    "created_at": "2026-08-13T18:37:50.916819+00:00",
+    "git_commit": "2d136cb0d2f956d33f832f8d146603b91ed25895",
+    "paytable": {
+      "flush": 1.5,
+      "four_of_a_kind": 10.0,
+      "full_house": 3.0,
+      "other": 0.0,
+      "royal_flush": 500.0,
+      "straight": 1.0,
+      "straight_flush": 50.0
+    },
+    "rules_version": "Wizard of Odds, accessed 2026-08-13; page updated 2026-08-03",
+    "sample_count": 500,
+    "seed": 20260813,
+    "solver_version": "0.1.0"
+  },
+  "stage": "river",
+  "states_examined": 500
+}

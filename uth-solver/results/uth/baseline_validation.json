@@ -1,0 +1,65 @@
+{
+  "confidence_interval_99_9": [
+    -0.05119490434213782,
+    -0.004745095657863473
+  ],
+  "difference": -0.0036700000000006484,
+  "metadata": {
+    "created_at": "2026-08-13T18:38:57.801877+00:00",
+    "git_commit": "2d136cb0d2f956d33f832f8d146603b91ed25895",
+    "paytable": {
+      "flush": 1.5,
+      "four_of_a_kind": 10.0,
+      "full_house": 3.0,
+      "other": 0.0,
+      "royal_flush": 500.0,
+      "straight": 1.0,
+      "straight_flush": 50.0
+    },
+    "rules_version": "Wizard of Odds, accessed 2026-08-13; page updated 2026-08-03",
+    "sample_count": 500000,
+    "seed": 20260813,
+    "solver_version": "0.1.0"
+  },
+  "note": "basic validates Wizard's readable strategy (-2.43%), not the optimal -2.185% baseline",
+  "our_ev": -0.027970000000000647,
+  "standard_error": 0.00705811143239277,
+  "eligible_for_exposed_edge": false,
+  "optimal_baseline_status": "NOT VALIDATED",
+  "status": "PASS",
+  "strategy": "basic",
+  "summary": {
+    "actions": {
+      "1X": 0.236906,
+      "2X": 0.214358,
+      "4X": 0.378244,
+      "FOLD": 0.170492
+    },
+    "average_play_wager": 2.178598,
+    "average_total_action": 4.178598,
+    "edge_vs_average_action": -0.0066936326490369845,
+    "ev_per_round": -0.027970000000000647,
+    "hands_per_second": 13767.599473480079,
+    "house_edge_vs_ante": 0.027970000000000647,
+    "n0": null,
+    "player_edge_vs_ante": -0.027970000000000647,
+    "player_edge_vs_initial": -0.013985000000000324,
+    "runtime_seconds": 36.31715180000174,
+    "sd_per_round": 4.990838456215224,
+    "statistics": {
+      "confidence": 0.999,
+      "confidence_interval": [
+        -0.05119490434213782,
+        -0.004745095657863473
+      ],
+      "count": 500000,
+      "half_width": 0.02322490434213717,
+      "mean": -0.027970000000000647,
+      "standard_error": 0.00705811143239277,
+      "variance": 24.90846849603676
+    },
+    "variance": 24.90846849603676
+  },
+  "wizard_ev": -0.0243,
+  "wizard_optimal_ev": -0.02185
+}
