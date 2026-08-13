@@ -176,7 +176,7 @@
     const project = projects[key];
 
     if (project) {
-      document.title = project.title + ' — Gallery';
+      document.title = project.title + ' | Gallery';
       document.getElementById('gallery-title').textContent = project.title;
       const grid = document.getElementById('gallery-grid');
       project.images.forEach(src => {
