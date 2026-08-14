@@ -39,6 +39,8 @@ jobs:
           cache-dependency-path: blackjack/package-lock.json
       - name: Build blackjack trainer
         working-directory: blackjack
+        env:
+          COUNTLAB_PASSWORD: ${{ secrets.COUNTLAB_PASSWORD }}
         run: |
           npm ci
           npm run build
