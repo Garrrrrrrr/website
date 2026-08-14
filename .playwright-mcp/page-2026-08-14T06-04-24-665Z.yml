@@ -1,0 +1,22 @@
+- generic [active] [ref=f8e1]:
+  - main [ref=f8e34]:
+    - generic [ref=f8e71]:
+      - generic [ref=f8e72]:
+        - generic [ref=f8e75]:
+          - generic [ref=f8e76]: Streak
+          - generic [ref=f8e77]: —
+        - generic [ref=f8e79]:
+          - generic [ref=f8e80]: Accuracy
+          - generic [ref=f8e81]: —
+          - generic [ref=f8e82]: No estimates yet
+      - generic [ref=f8e83]:
+        - button "End session" [ref=f8e85] [cursor=pointer]
+        - button "Settings" [ref=f8e90] [cursor=pointer]
+      - generic [ref=f8e97]:
+        - heading "Deck Estimation" [level=3] [ref=f8e102]
+        - paragraph [ref=f8e103]: Look at the discard tray and estimate how many decks remain in the shoe
+        - generic [ref=f8e104]:
+          - paragraph [ref=f8e105]: 6 Deck Shoe
+          - paragraph [ref=f8e106]: "Precision: Half Deck"
+        - button "Start Training" [ref=f8e107] [cursor=pointer]
+  - alert [ref=f8e3]

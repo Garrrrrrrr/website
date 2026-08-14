@@ -1,0 +1,69 @@
+- generic [active] [ref=f12e1]:
+  - generic [ref=f12e4]:
+    - generic [ref=f12e5]:
+      - generic [ref=f12e6]:
+        - button "Open menu" [ref=f12e7] [cursor=pointer]
+        - generic [ref=f12e12]:
+          - generic [ref=f12e13]:
+            - link "Dashboard" [ref=f12e14] [cursor=pointer]:
+              - /url: /dashboard
+            - button [ref=f12e18] [cursor=pointer]
+            - button [ref=f12e21] [cursor=pointer]
+            - button [ref=f12e24] [cursor=pointer]
+          - link:
+            - /url: /dashboard
+            - generic: AP Toolbox
+        - button "User menu" [ref=f12e29] [cursor=pointer]:
+          - generic [ref=f12e30]: G
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - button "G garrrrrrrr":
+                  - generic: G
+                  - generic: garrrrrrrr
+            - generic:
+              - link "Ploppy 0/100":
+                - /url: /dashboard/ranking
+                - generic: Ploppy
+                - generic: 0/100
+            - generic:
+              - generic:
+                - link "Dashboard":
+                  - /url: /dashboard
+                - link "Results Tracker":
+                  - /url: /dashboard/results
+                - link "Game Directory":
+                  - /url: /dashboard/game-directory
+                - link "Forum":
+                  - /url: /dashboard/forum
+                - link "Messages":
+                  - /url: /dashboard/messages
+    - main [ref=f12e34]:
+      - generic [ref=f12e36]:
+        - generic [ref=f12e37]:
+          - generic [ref=f12e43]:
+            - heading "Deck Estimation" [level=1] [ref=f12e44]
+            - paragraph [ref=f12e45]: Practice your deck estimation and true count conversions
+          - generic [ref=f12e52]:
+            - generic [ref=f12e53]:
+              - text: Number of Decks
+              - combobox [ref=f12e55] [cursor=pointer]:
+                - option "1 Deck"
+                - option "2 Decks" [selected]
+                - option "6 Decks"
+                - option "8 Decks"
+            - generic [ref=f12e57]:
+              - text: Estimation Precision
+              - combobox [ref=f12e59] [cursor=pointer]:
+                - option "Full Deck"
+                - option "Half Deck" [selected]
+                - option "Quarter Deck"
+            - generic [ref=f12e61] [cursor=pointer]:
+              - generic [ref=f12e62]:
+                - text: True Count Conversion
+                - paragraph [ref=f12e63]: Convert running count → true count
+              - switch [ref=f12e64]
+        - button "Start Training" [ref=f12e68] [cursor=pointer]
+  - alert [ref=f12e3]

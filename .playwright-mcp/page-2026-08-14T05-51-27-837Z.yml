@@ -1,0 +1,27 @@
+- generic [active] [ref=f5e1]:
+  - main [ref=f5e34]:
+    - generic [ref=f5e75]:
+      - generic [ref=f5e76]:
+        - generic [ref=f5e79]:
+          - generic [ref=f5e80]: Streak
+          - generic [ref=f5e81]: —
+        - generic [ref=f5e83]:
+          - generic [ref=f5e84]: Accuracy
+          - generic [ref=f5e85]: 100%
+          - generic [ref=f5e86]: 1/1
+      - generic [ref=f5e87]:
+        - button "End session" [ref=f5e89] [cursor=pointer]
+        - button "Settings" [ref=f5e94] [cursor=pointer]
+      - generic [ref=f5e115]:
+        - img "Discard tray" [ref=f5e119]
+        - generic [ref=f5e121]:
+          - generic [ref=f5e122]: Correct!
+          - generic [ref=f5e125]:
+            - generic [ref=f5e150]:
+              - generic [ref=f5e151]: Your Guess
+              - generic [ref=f5e152]: "3.5"
+            - generic [ref=f5e153]:
+              - generic [ref=f5e154]: Actual
+              - generic [ref=f5e155]: "3.33"
+          - button "Continue to True Count" [ref=f5e156] [cursor=pointer]
+  - alert [ref=f5e3]

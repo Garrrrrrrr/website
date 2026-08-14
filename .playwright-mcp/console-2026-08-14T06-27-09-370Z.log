@@ -1,0 +1,17 @@
+[     306ms] [LOG] [Fast Refresh] rebuilding @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/dev/hot-reloader/app/hot-reloader-app.js:196
+[     930ms] [LOG] [Fast Refresh] done in 624ms @ webpack-internal:///(app-pages-browser)/./node_modules/next/dist/client/dev/report-hmr-latency.js:13
+[    1653ms] [ERROR] Failed to load resource: the server responded with a status of 500 (Internal Server Error) @ http://localhost:3002/blackjack/training/deck-estimation/:0
+[    1824ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ webpack-internal:///(pages-dir-browser)/./node_modules/react-dom/cjs/react-dom-client.development.js:28004
+[    1878ms] TypeError: __webpack_modules__[moduleId] is not a function
+    at __webpack_require__ (file://C:\Users\gtse8\Documents\Code\website\blackjack\.next\server\webpack-runtime.js:25:42)
+    at eval (webpack-internal:///(rsc)/./node_modules/next/dist/server/app-render/encryption-utils.js:40:35)
+    at <unknown> (rsc)/./node_modules/next/dist/server/app-render/encryption-utils.js (C:\Users\gtse8\Documents\Code\website\blackjack\.next\server\vendor-chunks\next.js:1849:1)
+    at __webpack_require__ (file://C:\Users\gtse8\Documents\Code\website\blackjack\.next\server\webpack-runtime.js:25:42)
+    at eval (webpack-internal:///(rsc)/./node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2F%5B%5B...slug%5D%5D%2Fpage&page=%2F%5B%5B...slug%5D%5D%2Fpage&appPaths=%2F%5B%5B...slug%5D%5D%2Fpage&pagePath=private-next-app-dir%2F%5B%5B...slug%5D%5D%2Fpage.tsx&appDir=C%3A%5CUsers%5Cgtse8%5CDocuments%5CCode%5Cwebsite%5Cblackjack%5Capp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=C%3A%5CUsers%5Cgtse8%5CDocuments%5CCode%5Cwebsite%5Cblackjack&isDev=true&tsconfigPath=tsconfig.json&basePath=%2Fblackjack&assetPrefix=%2Fblackjack&nextConfigOutput=export&preferredRegion=&middlewareConfig=e30%3D&isGlobalNotFoundEnabled=!:28:103)
+    at <unknown> (rsc)/./node_modules/next/dist/build/webpack/loaders/next-app-loader/index.js?name=app%2F%5B%5B...slug%5D%5D%2Fpage&page=%2F%5B%5B...slug%5D%5D%2Fpage&appPaths=%2F%5B%5B...slug%5D%5D%2Fpage&pagePath=private-next-app-dir%2F%5B%5B...slug%5D%5D%2Fpage.tsx&appDir=C%3A%5CUsers%5Cgtse8%5CDocuments%5CCode%5Cwebsite%5Cblackjack%5Capp&pageExtensions=tsx&pageExtensions=ts&pageExtensions=jsx&pageExtensions=js&rootDir=C%3A%5CUsers%5Cgtse8%5CDocuments%5CCode%5Cwebsite%5Cblackjack&isDev=true&tsconfigPath=tsconfig.json&basePath=%2Fblackjack&assetPrefix=%2Fblackjack&nextConfigOutput=export&preferredRegion=&middlewareConfig=e30%3D&isGlobalNotFoundEnabled=! (C:\Users\gtse8\Documents\Code\website\blackjack\.next\server\app\[[...slug]]\page.js:77:1)
+    at __webpack_require__ (file://C:\Users\gtse8\Documents\Code\website\blackjack\.next\server\webpack-runtime.js:25:42)
+    at __webpack_exec__ (file://C:\Users\gtse8\Documents\Code\website\blackjack\.next\server\app\[[...slug]]\page.js:367:39)
+    at <unknown> (file://C:\Users\gtse8\Documents\Code\website\blackjack\.next\server\app\[[...slug]]\page.js:368:133)
+    at __webpack_require__.X (file://C:\Users\gtse8\Documents\Code\website\blackjack\.next\server\webpack-runtime.js:155:21)
+[    1878ms] [LOG] [HMR] connected @ webpack-internal:///(pages-dir-browser)/./node_modules/next/dist/client/dev/hot-reloader/pages/websocket.js:45
+[    1885ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:3002/favicon.ico:0

@@ -1,0 +1,103 @@
+- generic [active] [ref=f12e1]:
+  - generic [ref=f12e4]:
+    - generic [ref=f12e5]:
+      - generic [ref=f12e6]:
+        - button "Open menu" [ref=f12e7] [cursor=pointer]
+        - generic [ref=f12e12]:
+          - generic [ref=f12e13]:
+            - link "Dashboard" [ref=f12e14] [cursor=pointer]:
+              - /url: /dashboard
+            - button [ref=f12e18] [cursor=pointer]
+            - button [ref=f12e21] [cursor=pointer]
+            - button [ref=f12e24] [cursor=pointer]
+          - link:
+            - /url: /dashboard
+            - generic: AP Toolbox
+        - button "User menu" [ref=f12e29] [cursor=pointer]:
+          - generic [ref=f12e30]: G
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - button "G garrrrrrrr":
+                  - generic: G
+                  - generic: garrrrrrrr
+            - generic:
+              - link "Ploppy 0/100":
+                - /url: /dashboard/ranking
+                - generic: Ploppy
+                - generic: 0/100
+            - generic:
+              - generic:
+                - link "Dashboard":
+                  - /url: /dashboard
+                - link "Results Tracker":
+                  - /url: /dashboard/results
+                - link "Game Directory":
+                  - /url: /dashboard/game-directory
+                - link "Forum":
+                  - /url: /dashboard/forum
+                - link "Messages":
+                  - /url: /dashboard/messages
+    - main [ref=f12e34]:
+      - generic [ref=f12e133]:
+        - generic [ref=f12e140]:
+          - generic [ref=f12e141]:
+            - heading "Session Report" [level=1] [ref=f12e142]
+            - paragraph [ref=f12e143]: Deck Estimation • 43 rounds • 0m 57s
+          - generic [ref=f12e150]:
+            - generic [ref=f12e151]: 51%
+            - generic [ref=f12e152]: Round Accuracy
+        - generic [ref=f12e155]:
+          - generic [ref=f12e156]:
+            - generic [ref=f12e158]:
+              - generic [ref=f12e159]: Rounds Correct
+              - generic [ref=f12e164]: "22"
+              - generic [ref=f12e165]: of 43
+            - generic [ref=f12e168]:
+              - generic [ref=f12e169]: Mistakes
+              - generic [ref=f12e175]: "21"
+              - generic [ref=f12e176]: of 43
+            - generic [ref=f12e179]:
+              - generic [ref=f12e180]: Accuracy
+              - generic [ref=f12e186]: 51%
+              - generic [ref=f12e187]: 22/43
+            - generic [ref=f12e190]:
+              - generic [ref=f12e191]: Rounds
+              - generic [ref=f12e196]: "43"
+              - generic [ref=f12e197]: 0m 57s
+          - generic [ref=f12e199]:
+            - heading "Estimation Performance" [level=3] [ref=f12e200]
+            - generic [ref=f12e207]:
+              - generic [ref=f12e208]: Deck Estimation
+              - generic [ref=f12e214]:
+                - generic [ref=f12e215]: 22/43
+                - generic [ref=f12e216]: 51%
+            - generic [ref=f12e220]:
+              - generic [ref=f12e221]:
+                - generic [ref=f12e222]: Deck Est. Correct
+                - generic [ref=f12e223]: "22"
+                - generic [ref=f12e224]: of 43
+              - generic [ref=f12e225]:
+                - generic [ref=f12e226]: Deck Est. Accuracy
+                - generic [ref=f12e227]: 51%
+          - generic [ref=f12e228]:
+            - heading "Session Summary" [level=3] [ref=f12e229]
+            - generic [ref=f12e233]:
+              - generic [ref=f12e234]:
+                - generic [ref=f12e235]: Duration
+                - generic [ref=f12e236]: 0m 57s
+              - generic [ref=f12e237]:
+                - generic [ref=f12e238]: Total Rounds
+                - generic [ref=f12e239]: "43"
+              - generic [ref=f12e240]:
+                - generic [ref=f12e241]: Mode
+                - generic [ref=f12e242]: Deck Estimation Only
+              - generic [ref=f12e243]:
+                - generic [ref=f12e244]: Accuracy
+                - generic [ref=f12e245]: 51.2%
+          - generic [ref=f12e246]:
+            - button "Train Again" [ref=f12e247] [cursor=pointer]
+            - button "View All Stats" [ref=f12e253] [cursor=pointer]
+  - alert [ref=f12e3]
