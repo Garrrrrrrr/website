@@ -31,25 +31,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-          cache-dependency-path: blackjack/package-lock.json
-      - name: Build blackjack trainer
-        working-directory: blackjack
-        env:
-          COUNTLAB_PASSWORD: ${{ secrets.COUNTLAB_PASSWORD }}
-        run: |
-          npm ci
-          npm run build
       - name: Assemble site
         run: |
-          mkdir -p _site/blackjack
+          mkdir -p _site
           cp index.html gallery.html LICENSE _site/
           cp -R assets images _site/
-          cp -R blackjack/out/. _site/blackjack/
           touch _site/.nojekyll
       - name: Setup Pages
         uses: actions/configure-pages@v5
