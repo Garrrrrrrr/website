@@ -31,12 +31,38 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      # Copy everything except an explicit deny list, rather than naming each
+      # file to include. The previous approach silently dropped any new page
+      # that was not added here by hand.
       - name: Assemble site
         run: |
           mkdir -p _site
-          cp index.html gallery.html LICENSE _site/
-          cp -R assets images _site/
+          rsync -a ./ _site/ \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude '_site' \
+            --exclude 'uth-solver' \
+            --exclude 'images/_originals' \
+            --exclude 'writing/_template.html' \
+            --exclude '.playwright-mcp' \
+            --exclude '.claude' \
+            --exclude 'node_modules' \
+            --exclude '.gitignore'
           touch _site/.nojekyll
+      - name: Verify expected pages are present
+        run: |
+          for f in index.html 404.html gallery.html CNAME robots.txt \
+                   sitemap.xml site.webmanifest favicon.svg favicon.ico \
+                   work/countlab/index.html \
+                   work/gateway-training/index.html \
+                   work/neurocalm/index.html \
+                   writing/index.html \
+                   assets/css/tokens.css assets/css/styles.css \
+                   assets/js/main.js assets/js/raytracer.js; do
+            test -f "_site/$f" || { echo "::error::missing _site/$f"; exit 1; }
+          done
+          test ! -f _site/writing/_template.html || { echo "::error::template leaked into build"; exit 1; }
+          echo "All expected files present."
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
