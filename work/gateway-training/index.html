@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gateway Training Tool, training records for casino training teams · Garrick Tse</title>
+<meta name="description" content="A role-aware training records platform for casino training teams across BC, AB and ON, with competency sign-offs, an append-only audit log, and row-level security in PostgreSQL.">
+<link rel="canonical" href="https://garricktse.com/work/gateway-training/">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4F4F1">
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Garrick Tse">
+<meta property="og:url" content="https://garricktse.com/work/gateway-training/">
+<meta property="og:title" content="Gateway Training Tool, training records for casino training teams · Garrick Tse">
+<meta property="og:description" content="A role-aware training records platform for casino training teams across BC, AB and ON, with competency sign-offs, an append-only audit log, and row-level security in PostgreSQL.">
+<meta property="og:image" content="https://garricktse.com/images/og/gateway-training.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Gateway Training Tool case study, Garrick Tse">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Gateway Training Tool, training records for casino training teams · Garrick Tse">
+<meta name="twitter:description" content="A role-aware training records platform for casino training teams across BC, AB and ON, with competency sign-offs, an append-only audit log, and row-level security in PostgreSQL.">
+<meta name="twitter:image" content="https://garricktse.com/images/og/gateway-training.png">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="stylesheet" href="/assets/css/tokens.css">
+<link rel="stylesheet" href="/assets/css/styles.css">
+
+<!-- Applied before first paint so the theme never flashes. -->
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light'){d.setAttribute('data-theme',t);}}catch(e){}var m=document.querySelector('meta[name="theme-color"]');var dark=d.getAttribute('data-theme')==='dark'||(!d.getAttribute('data-theme')&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(m&&dark){m.setAttribute('content','#101113');}})();</script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<g id="i-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.7A5.2 5.2 0 0 0 19.9 5a4.9 4.9 0 0 0-.1-3.6s-1.1-.3-3.7 1.4a12.7 12.7 0 0 0-6.6 0C6.9 1.1 5.8 1.4 5.8 1.4A4.9 4.9 0 0 0 5.7 5a5.2 5.2 0 0 0-1.4 3.7c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.6V22" transform="translate(0 1)"/></g>
+<g id="i-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></g>
+<g id="i-mail"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></g>
+<g id="i-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></g>
+<g id="i-external"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></g>
+<g id="i-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></g>
+<g id="i-arrow-left"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></g>
+<g id="i-chevron-down"><path d="m6 9 6 6 6-6"/></g>
+<g id="i-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g>
+<g id="i-moon"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></g>
+<g id="i-menu"><path d="M3 6h18M3 12h18M3 18h18"/></g>
+<g id="i-close"><path d="M18 6 6 18M6 6l12 12"/></g>
+</defs></svg>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="wordmark" href="/">
+      <span class="wordmark__mark" aria-hidden="true"></span>
+      Garrick Tse
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__links">
+        <li><a class="nav__link" href="/#work">Work</a></li>
+        <li><a class="nav__link" href="/#about">About</a></li>
+        <li><a class="nav__link" href="/#contact">Contact</a></li>
+      </ul>
+
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch between light and dark theme">
+        <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-moon"/></svg>
+        <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-sun"/></svg>
+      </button>
+
+      <a class="btn btn--primary nav__cta" href="/images/cv/Garrick_CV.pdf" download="Garrick-Tse-CV.pdf">
+        <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-download"/></svg>
+        Download CV
+      </a>
+
+      <button class="icon-btn nav__toggle" type="button" data-sheet-open aria-expanded="false" aria-controls="nav-sheet" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<div class="sheet" id="nav-sheet" hidden>
+  <div class="container">
+    <div class="sheet__head">
+      <span class="wordmark"><span class="wordmark__mark" aria-hidden="true"></span>Garrick Tse</span>
+      <button class="icon-btn" type="button" data-sheet-close aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+    </div>
+    <ul class="sheet__links">
+      <li><a class="sheet__link" href="/#work">Work</a></li>
+      <li><a class="sheet__link" href="/#experience">Experience</a></li>
+      <li><a class="sheet__link" href="/#about">About</a></li>
+      <li><a class="sheet__link" href="/#contact">Contact</a></li>
+    </ul>
+    <div class="sheet__actions">
+      <a class="btn btn--primary" href="/images/cv/Garrick_CV.pdf" download="Garrick-Tse-CV.pdf">
+        <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-download"/></svg>
+        Download CV
+      </a>
+      <a class="btn btn--secondary" href="mailto:g.tse8888@gmail.com">Email me</a>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+
+  <article class="case">
+    <div class="container">
+      <p class="case__back">
+        <a class="link mono" href="/#work"><svg class="link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-arrow-left"/></svg> All work</a>
+      </p>
+
+      <p class="eyebrow">Selected work</p>
+      <h1 class="t-h1 case__title">Gateway Training Tool</h1>
+      <p class="t-lead case__lead">A training records platform for coordinators, trainers and students across three provinces, built on my own time to replace a spreadsheet process I was working inside.</p>
+
+      <dl class="case__meta">
+        <div class="case__meta-row">
+          <dt class="eyebrow case__meta-key">Year</dt>
+          <dd class="case__meta-val">2026</dd>
+        </div>
+        <div class="case__meta-row">
+          <dt class="eyebrow case__meta-key">Role</dt>
+          <dd class="case__meta-val">Solo. Built on my own time, not as assigned work</dd>
+        </div>
+        <div class="case__meta-row">
+          <dt class="eyebrow case__meta-key">Stack</dt>
+          <dd class="case__meta-val">TypeScript, React, Tailwind CSS, Node.js, PostgreSQL, Supabase</dd>
+        </div>
+        <div class="case__meta-row">
+          <dt class="eyebrow case__meta-key">Live</dt>
+          <dd class="case__meta-val"><a href="https://gatewaytraining.ca" target="_blank" rel="noopener noreferrer">gatewaytraining.ca</a></dd>
+        </div>
+        <div class="case__meta-row">
+          <dt class="eyebrow case__meta-key">Source</dt>
+          <dd class="case__meta-val"><a href="https://github.com/Garrrrrrrr/GatewayTrainingTool" target="_blank" rel="noopener noreferrer">github.com/Garrrrrrrr/GatewayTrainingTool</a></dd>
+        </div>
+      </dl>
+
+      <section class="case__block">
+        <div class="case__block-head">
+          <h2 class="t-h2">The problem</h2>
+        </div>
+        <div class="prose">
+          <p>
+            I trained dealers at Gateway. Training progress lived in spreadsheets passed
+            between coordinators, one per cohort, edited by whoever had the file open.
+            That holds up until somebody asks a question the records have to answer: has
+            this person actually been signed off on this game, by whom, and when.
+          </p>
+          <p>
+            A spreadsheet cannot answer that defensibly. There is no history of who
+            changed a score, nothing stopping a trainer at one property from editing
+            another property's cohort, and no way to confirm a student has met every
+            graduation criterion short of reading every row by hand. Training records are
+            compliance records. They matter most at the moment somebody audits them,
+            which is exactly when a shared spreadsheet is least trustworthy.
+          </p>
+        </div>
+      </section>
+
+      <section class="case__block">
+        <div class="case__block-head">
+          <h2 class="t-h2">What I built</h2>
+        </div>
+        <div class="prose">
+          <p>
+            A role-aware platform for coordinators, trainers and students, scoped by
+            province across BC, AB and ON.
+          </p>
+          <p>
+            Coordinators create cohorts with dates, property, game type and an assigned
+            trainer, then publish schedules students can see. Trainers work on the floor:
+            a built-in drill timer whose result writes straight into the drill log, per
+            student test scores against configurable pass and fail thresholds, attendance
+            marking, and daily report upload by photo or scanned PDF.
+          </p>
+          <p>
+            The records side turns that into competency sign-offs, a graduation checklist
+            that will not clear until attendance, drills and scores all pass, retraining
+            flags raised automatically on repeat failure, and an audit log of every score
+            entry, sign-off and upload with the user and timestamp attached.
+          </p>
+          <p>
+            It runs on Supabase over PostgreSQL, with the front end deployed on Vercel.
+            The tool is not a Gateway product and is not affiliated with or endorsed by
+            the company; it is something I built because I was the one using the process.
+          </p>
+        </div>
+
+          <figure class="figure">
+            <button class="figure__frame" type="button" data-lightbox="gateway" data-caption="gatewaytraining.ca. The tool itself sits behind an account, so this is the entry point rather than the application">
+              <img src="/images/projects/gateway-login.webp" width="1440" height="1000" loading="lazy" decoding="async" alt="gatewaytraining.ca. The tool itself sits behind an account, so this is the entry point rather than the application">
+            </button>
+            <figcaption>gatewaytraining.ca. The tool itself sits behind an account, so this is the entry point rather than the application</figcaption>
+          </figure>
+      </section>
+
+      <section class="case__block">
+        <div class="case__block-head">
+          <h2 class="t-h2">Decisions</h2>
+        </div>
+        <div class="decision">
+          <h3 class="t-h3 decision__q">Model the hierarchy in the database, not the interface.</h3>
+          <div class="prose">
+            <p>
+              Coordinator, trainer and student is not a display concern, it is the access
+              rule. The hierarchy maps onto a relational model with row-level security in
+              PostgreSQL, so a trainer in Alberta cannot read a British Columbia cohort
+              even if a route is guessed or a request is hand-crafted. Enforcing it in
+              the front end would have been quicker and would have put the rule in the
+              one place an attacker controls.
+            </p></div>
+        </div>
+        <div class="decision">
+          <h3 class="t-h3 decision__q">Make the record append-only.</h3>
+          <div class="prose">
+            <p>
+              Sign-offs and score entries are never edited in place. Every change is a
+              new row carrying the user and the timestamp, because the entire value of
+              the system is being able to reconstruct what was true on a given day. A
+              field that can be quietly overwritten is a field an auditor cannot rely on.
+            </p></div>
+        </div>
+        <div class="decision">
+          <h3 class="t-h3 decision__q">Build for a phone held on a casino floor.</h3>
+          <div class="prose">
+            <p>
+              Trainers use this standing at a table, one-handed, between rounds. The
+              highest-frequency actions are starting a drill, stopping it, and marking
+              attendance, so those are one tap each and reachable without scrolling.
+              React with TypeScript was chosen partly so the component and data layer
+              could move to React Native later without a rewrite.
+            </p></div>
+        </div>
+      </section>
+
+      <nav class="case__nav" aria-label="Other projects">
+        <a class="case__nav-link" href="/work/countlab/">
+          <span class="eyebrow">Previous</span>
+          <span class="t-h3">CountLab</span>
+        </a>
+        <a class="case__nav-link case__nav-link--next" href="/work/neurocalm/">
+          <span class="eyebrow">Next</span>
+          <span class="t-h3">Neurocalm</span>
+        </a>
+      </nav>
+    </div>
+  </article>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p class="mono footer__meta">
+      &copy; <span data-year>2026</span> Garrick Tse.
+      Hand-built, no framework.
+      <a href="https://github.com/Garrrrrrrr/website" target="_blank" rel="noopener noreferrer">Source</a>
+    </p>
+    <div class="footer__social">
+      <a class="icon-btn" href="https://github.com/Garrrrrrrr" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-github"/></svg>
+      </a>
+      <a class="icon-btn" href="https://www.linkedin.com/in/garrick-tse-6a5746229/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-linkedin"/></svg>
+      </a>
+      <a class="icon-btn" href="mailto:g.tse8888@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot viewer" hidden>
+  <button class="icon-btn lightbox__close" type="button" aria-label="Close viewer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-close"/></svg>
+  </button>
+  <button class="icon-btn lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous screenshot">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-arrow-left"/></svg>
+  </button>
+  <button class="icon-btn lightbox__nav lightbox__nav--next" type="button" aria-label="Next screenshot">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+  </button>
+  <figure class="lightbox__figure">
+    <img class="lightbox__img" alt="">
+    <figcaption class="mono lightbox__caption"></figcaption>
+  </figure>
+</div>
+
+<script src="/assets/js/main.js" defer></script>
+</body>
+</html>

@@ -4,3 +4,6 @@ node_modules/
 .env
 .env.local
 .env*.local
+
+# Full-resolution image originals (kept locally, not deployed)
+images/_originals/

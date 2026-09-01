@@ -1,369 +1,653 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Garrick Tse, Computing Science student at the University of Alberta. Portfolio showcasing full-stack projects, systems programming, and software engineering work.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Garrick Tse, software engineer</title>
+<meta name="description" content="Computing Science at the University of Alberta. A ray tracer written from scratch in C, a card counting trainer running at countlab.ca, and a training platform for casino staff across three provinces.">
+<link rel="canonical" href="https://garricktse.com/">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Garrick Tse | Portfolio">
-  <meta property="og:description" content="Computing Science student at the University of Alberta. Full-stack developer building tools people actually use.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://garricktse.com">
-  <meta property="og:image" content="https://garricktse.com/images/cv/headshot.png">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4F4F1">
 
-  <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>G</text></svg>">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Garrick Tse">
+<meta property="og:url" content="https://garricktse.com/">
+<meta property="og:title" content="Garrick Tse, software engineer">
+<meta property="og:description" content="Computing Science at the University of Alberta. A ray tracer in C, a card counting trainer, and a training platform for casino staff across three provinces.">
+<meta property="og:image" content="https://garricktse.com/images/og/home.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Garrick Tse, software engineer. Selected work index.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Garrick Tse, software engineer">
+<meta name="twitter:description" content="Computing Science at the University of Alberta. A ray tracer in C, a card counting trainer, and a training platform for casino staff across three provinces.">
+<meta name="twitter:image" content="https://garricktse.com/images/og/home.png">
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="/assets/css/tokens.css">
+<link rel="stylesheet" href="/assets/css/styles.css">
 
-  <link rel="stylesheet" href="assets/css/styles.css">
+<!-- Applied before first paint so the theme never flashes. -->
+<script>(function(){var d=document.documentElement;d.classList.add('js');try{var t=localStorage.getItem('theme');if(t==='dark'||t==='light'){d.setAttribute('data-theme',t);}}catch(e){}var m=document.querySelector('meta[name="theme-color"]');var dark=d.getAttribute('data-theme')==='dark'||(!d.getAttribute('data-theme')&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(m&&dark){m.setAttribute('content','#101113');}})();</script>
 
-  <title>Garrick Tse - Portfolio</title>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Garrick Tse",
+  "url": "https://garricktse.com/",
+  "email": "mailto:g.tse8888@gmail.com",
+  "jobTitle": "Software engineer",
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Alberta" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Edmonton", "addressRegion": "AB", "addressCountry": "CA" },
+  "sameAs": [
+    "https://github.com/Garrrrrrrr",
+    "https://www.linkedin.com/in/garrick-tse-6a5746229/"
+  ]
+}
+</script>
 </head>
+
 <body>
-  <!-- NAVBAR -->
-  <nav>
-    <div class="left">
-      <a href="/">Garrick Tse</a>
-    </div>
+<a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="right">
-      <a href="https://countlab.ca" target="_blank" rel="noopener noreferrer" aria-label="Open CountLab blackjack trainer">
-        <i class="fa-solid fa-clover"></i>
-        <span>CountLab</span>
-      </a>
+<!-- Icon sprite. Inlined so icon-only controls never render empty. -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs>
+<g id="i-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3-.3 6.2-1.5 6.2-6.7A5.2 5.2 0 0 0 19.9 5a4.9 4.9 0 0 0-.1-3.6s-1.1-.3-3.7 1.4a12.7 12.7 0 0 0-6.6 0C6.9 1.1 5.8 1.4 5.8 1.4A4.9 4.9 0 0 0 5.7 5a5.2 5.2 0 0 0-1.4 3.7c0 5.2 3.2 6.4 6.2 6.7a3.4 3.4 0 0 0-.9 2.6V22" transform="translate(0 1)"/></g>
+<g id="i-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></g>
+<g id="i-mail"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></g>
+<g id="i-download"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></g>
+<g id="i-external"><path d="M7 17 17 7"/><path d="M9 7h8v8"/></g>
+<g id="i-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></g>
+<g id="i-arrow-left"><path d="M19 12H5"/><path d="m12 19-7-7 7-7"/></g>
+<g id="i-chevron-down"><path d="m6 9 6 6 6-6"/></g>
+<g id="i-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></g>
+<g id="i-moon"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></g>
+<g id="i-menu"><path d="M3 6h18M3 12h18M3 18h18"/></g>
+<g id="i-close"><path d="M18 6 6 18M6 6l12 12"/></g>
+</defs></svg>
 
-      <a href="https://github.com/Garrrrrrrr" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
-        <i class="fa-brands fa-github"></i>
-        <span>Github</span>
-      </a>
+<header class="header">
+  <div class="container header__inner">
+    <a class="wordmark" href="/">
+      <span class="wordmark__mark" aria-hidden="true"></span>
+      Garrick Tse
+    </a>
 
-      <a href="https://www.linkedin.com/in/garrick-tse-6a5746229/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
-        <i class="fa-brands fa-linkedin"></i>
-        <span>Linkedin</span>
-      </a>
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__links">
+        <li><a class="nav__link" href="#work">Work</a></li>
+        <li><a class="nav__link" href="#about">About</a></li>
+        <li><a class="nav__link" href="#contact">Contact</a></li>
+      </ul>
 
-      <a href="images/cv/Garrick_CV.pdf" download="Garrick_CV.pdf" aria-label="Download CV">
-        <i class="fa-solid fa-file-pdf"></i>
-        <span>CV</span>
-      </a>
-
-      <a href="mailto:g.tse8888@gmail.com" aria-label="Send email">
-        <i class="fa-solid fa-envelope"></i>
-        <span>Email</span>
-      </a>
-
-      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-        <i class="fa-solid fa-moon"></i>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch between light and dark theme">
+        <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-moon"/></svg>
+        <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-sun"/></svg>
       </button>
 
-      <a href="#contact" class="contact-btn">Contact</a>
+      <a class="btn btn--primary nav__cta" href="/images/cv/Garrick_CV.pdf" download="Garrick-Tse-CV.pdf">
+        <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-download"/></svg>
+        Download CV
+      </a>
+
+      <button class="icon-btn nav__toggle" type="button" data-sheet-open aria-expanded="false" aria-controls="nav-sheet" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-menu"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<div class="sheet" id="nav-sheet" hidden>
+  <div class="container">
+    <div class="sheet__head">
+      <span class="wordmark"><span class="wordmark__mark" aria-hidden="true"></span>Garrick Tse</span>
+      <button class="icon-btn" type="button" data-sheet-close aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
     </div>
-  </nav>
+    <ul class="sheet__links">
+      <li><a class="sheet__link" href="#work">Work</a></li>
+      <li><a class="sheet__link" href="#experience">Experience</a></li>
+      <li><a class="sheet__link" href="#about">About</a></li>
+      <li><a class="sheet__link" href="#contact">Contact</a></li>
+    </ul>
+    <div class="sheet__actions">
+      <a class="btn btn--primary" href="/images/cv/Garrick_CV.pdf" download="Garrick-Tse-CV.pdf">
+        <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-download"/></svg>
+        Download CV
+      </a>
+      <a class="btn btn--secondary" href="mailto:g.tse8888@gmail.com">Email me</a>
+    </div>
+  </div>
+</div>
 
-  <main>
-    <!-- SECTION 1: Hero -->
-    <section class="hero-section">
-      <div class="text">
-        <h2>Hi, I'm Garrick</h2>
-        <p>I'm a Computing Science Student at the University of Alberta with a passion for creating innovative solutions. I have experience in building and maintaining full stack applications.</p>
-      </div>
-    </section>
+<main id="main">
 
-    <!-- SECTION 1b: About -->
-    <section id="about" class="about-section">
-      <img src="images/cv/headshot.png" alt="Photo of Garrick Tse" class="about-photo">
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>I'm a third-year Computing Science student at the University of Alberta who gravitates toward problems that sit at the intersection of systems and product. I've built a 3D rendering engine from scratch in C, scraped and visualized millions of financial data points for a stock tracker, and architected a full-stack training platform for the training department at Gateway Casinos. I like understanding how things work at a low level, then using that to build things people actually use. I'm actively looking for <strong>Summer 2026 internship or co-op opportunities</strong> in software development. If you're working on something interesting, I'd love to hear about it.</p>
-      </div>
-    </section>
+  <!-- HERO ---------------------------------------------------------------- -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <p class="eyebrow">Computing Science, University of Alberta</p>
+        <h1 class="t-display hero__statement">I build things that have to be correct.</h1>
+        <p class="t-lead hero__lead">
+          A ray tracer written from scratch in C, a card counting trainer running at
+          countlab.ca, and a training platform built for the department where I trained dealers.
+        </p>
 
-    <!-- SECTION 2: Skills -->
-    <section id="skills" class="skills-section">
-      <h2>Skills</h2>
+        <dl class="hero__meta">
+          <div class="hero__meta-row">
+            <dt class="eyebrow hero__meta-key">Open to</dt>
+            <!-- Availability. The one line on this site that goes stale.
+                 Review it at the start of every recruiting cycle. -->
+            <dd class="hero__meta-val">Winter 2026 and beyond</dd>
+          </div>
+          <div class="hero__meta-row">
+            <dt class="eyebrow hero__meta-key">Based in</dt>
+            <dd class="hero__meta-val">Edmonton, AB, open to relocating</dd>
+          </div>
+          <div class="hero__meta-row">
+            <dt class="eyebrow hero__meta-key">Currently</dt>
+            <dd class="hero__meta-val"><a href="https://countlab.ca" target="_blank" rel="noopener noreferrer">CountLab</a></dd>
+          </div>
+        </dl>
 
-      <div class="skills-group">
-        <h3 class="skills-group-label">Languages</h3>
-        <div class="cells">
-          <div class="cell">
-            <img src="images/lang/python-original.svg" alt="Python logo">
-            <span>Python</span>
-          </div>
-          <div class="cell">
-            <img src="images/lang/javascript-logo.webp" alt="JavaScript logo">
-            <span>JavaScript</span>
-          </div>
-          <div class="cell">
-            <img src="images/lang/typescript-original.svg" alt="TypeScript logo">
-            <span>TypeScript</span>
-          </div>
-          <div class="cell">
-            <img src="images/lang/java-original.svg" alt="Java logo">
-            <span>Java</span>
-          </div>
-          <div class="cell">
-            <img src="images/lang/c-original.svg" alt="C logo">
-            <span>C</span>
-          </div>
-          <div class="cell">
-            <img src="images/lang/postgresql-original.svg" alt="SQL logo">
-            <span>SQL</span>
-          </div>
-          <div class="cell">
-            <img src="images/lang/php-original.svg" alt="PHP logo">
-            <span>PHP</span>
-          </div>
-          <div class="cell">
-            <img src="images/lang/html-logo.webp" alt="HTML logo">
-            <span>HTML</span>
-          </div>
-          <div class="cell">
-            <img src="images/lang/css-logo.webp" alt="CSS logo">
-            <span>CSS</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="skills-group">
-        <h3 class="skills-group-label">Frameworks & Libraries</h3>
-        <div class="cells">
-          <div class="cell">
-            <img src="images/lang/react-logo.webp" alt="React logo">
-            <span>React.js</span>
-          </div>
-          <div class="cell">
-            <img src="images/lang/node-logo.webp" alt="Node.js logo">
-            <span>Node.js</span>
-          </div>
-          <div class="cell">
-            <img src="images/lang/express-original.svg" alt="Express logo">
-            <span>Express</span>
-          </div>
-          <div class="cell">
-            <img src="images/lang/pandas-original.svg" alt="Pandas logo">
-            <span>Pandas</span>
-          </div>
-          <div class="cell">
-            <img src="images/lang/numpy-original.svg" alt="NumPy logo">
-            <span>NumPy</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="skills-group">
-        <h3 class="skills-group-label">Tools & Databases</h3>
-        <div class="cells">
-          <div class="cell">
-            <img src="images/lang/git-original.svg" alt="Git logo">
-            <span>Git</span>
-          </div>
-          <div class="cell">
-            <img src="images/lang/docker-original.svg" alt="Docker logo">
-            <span>Docker</span>
-          </div>
-          <div class="cell">
-            <img src="images/lang/supabase-original.svg" alt="Supabase logo">
-            <span>Supabase</span>
-          </div>
-          <div class="cell">
-            <img src="images/lang/postgresql-original.svg" alt="PostgreSQL logo">
-            <span>PostgreSQL</span>
-          </div>
-          <div class="cell">
-            <img src="images/lang/mongodb-original.svg" alt="MongoDB logo">
-            <span>MongoDB</span>
-          </div>
-          <div class="cell">
-            <img src="images/lang/firebase-original.svg" alt="Firebase logo">
-            <span>Firebase</span>
-          </div>
-          <div class="cell">
-            <img src="images/lang/amazonwebservices-plain-wordmark.svg" alt="AWS logo">
-            <span>AWS</span>
-          </div>
-        </div>
-      </div>
-
-    </section>
-
-    <!-- SECTION 2b: Projects -->
-    <section id="projects" class="projects-section">
-      <h2>Projects</h2>
-
-      <div class="cards">
-
-        <div class="card">
-          <a href="https://countlab.ca" class="card-link" target="_blank" rel="noopener noreferrer">
-            <h3>CountLab Blackjack Trainer</h3>
-            <p>Interactive Hi-Lo card-counting and blackjack decision trainer with full-shoe drills, basic strategy, index deviations, bankroll analysis, and account-synced performance statistics.</p>
-            <div class="lang">
-              <span class="pill">TypeScript</span>
-              <span class="pill">Next.js</span>
-              <span class="pill">React</span>
-              <span class="pill">Tailwind CSS</span>
-            </div>
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#work">
+            Selected work
+            <svg class="btn__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-arrow-right"/></svg>
           </a>
+          <a class="btn btn--secondary" href="#contact">Get in touch</a>
         </div>
+      </div>
 
-        <div class="card">
-          <a href="https://github.com/Garrrrrrrr/GatewayTrainingTool" target="_blank" rel="noopener noreferrer" class="card-link">
-            <h3>Gateway Training Tool</h3>
-            <p>Web-based internal training management platform for Gateway Casinos supporting coordinators, trainers, and students across BC, AB, and ON. Deployed on Vercel with Supabase backend.</p>
-            <div class="lang">
-              <span class="pill">TypeScript</span>
-              <span class="pill">React.js</span>
-              <span class="pill">Tailwind CSS</span>
-              <span class="pill">Supabase</span>
-            </div>
-          </a>
+      <!-- The renderer. Real ray tracing, not an animation. -->
+      <figure class="render" data-render>
+        <div class="render__stage">
+          <!-- Shown until the renderer has a frame, and permanently if
+               scripting is unavailable. Same scene, rendered ahead of time. -->
+          <img class="render__fallback" src="/images/render-fallback.webp"
+               width="720" height="540" decoding="async"
+               alt="A ray traced scene: three spheres on a checkered plane, lit by a single light.">
+          <canvas class="render__canvas" width="640" height="480" role="img"
+                  aria-label="A ray traced scene: three spheres on a checkered plane, lit by a single light, rendering progressively."
+                  aria-busy="true"></canvas>
         </div>
+        <div class="render__progress" role="presentation">
+          <div class="render__bar"></div>
+        </div>
+        <figcaption class="render__foot">
+          <span class="mono render__caption">
+            Ray-sphere intersection, Lambertian diffuse with a Blinn-Phong specular
+            term, hard shadows. Ported from the C renderer below.
+          </span>
+          <button class="btn btn--quiet" type="button" data-render-replay hidden>Re-render</button>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
 
-        <div class="card">
-          <a href="https://github.com/Garrrrrrrr/Neurocalm" target="_blank" rel="noopener noreferrer" class="card-link">
-            <h3>Neurocalm</h3>
-            <p>EEG-based relaxation recommendation system using OpenBCI hardware with real-time visualization and reinforcement learning.</p>
-            <div class="lang">
-              <span class="pill">Python</span>
-              <span class="pill">React</span>
-              <span class="pill">WebSockets</span>
-              <span class="pill">Firebase</span>
+  <!-- EXPERIENCE ---------------------------------------------------------- -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-head section-head--flush">
+        <h2 class="t-h2">Experience</h2>
+      </div>
+
+      <div class="exp">
+        <article class="exp__item reveal">
+          <!-- CONFIRM: start and end dates for this role. -->
+          <p class="mono exp__dates">Gateway Casinos</p>
+          <div>
+            <h3 class="t-h3">Dealer and dealer trainer</h3>
+            <p class="mono exp__org">Grand Villa Casino, Edmonton</p>
+            <div class="exp__body">
+              <p>
+                Dealt table games and trained new dealers on procedure, game protection
+                and pace. Training progress and sign-offs were tracked on spreadsheets
+                passed between coordinators, which made it hard to answer a simple
+                question: who has actually been signed off on what.
+              </p>
+              <p>
+                I built <a href="https://gatewaytraining.ca" target="_blank" rel="noopener noreferrer">gatewaytraining.ca</a>
+                on my own time to replace that process. It is not something I was
+                assigned or paid to do.
+              </p>
             </div>
-          </a>
-          <a class="preview-trigger" href="gallery.html?project=neurocalm" aria-label="View Neurocalm screenshots">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            <span class="preview-popup">
-              <img src="images/projects/ncalm1.png" alt="Neurocalm dashboard">
-              <img src="images/projects/ncalm2.png" alt="Neurocalm EEG view">
-              <img src="images/projects/ncalm3.png" alt="Neurocalm recommendations">
-              <img src="images/projects/ncalm4.png" alt="Neurocalm settings">
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTED WORK -------------------------------------------------------- -->
+  <section class="section" id="work">
+    <div class="container">
+      <div class="section-head section-head--flush">
+        <h2 class="t-h2">Selected work</h2>
+        <span class="mono">07</span>
+      </div>
+
+      <div class="work">
+
+        <!-- 1. CountLab -->
+        <div class="work__item">
+          <a class="work-row" href="/work/countlab/">
+            <span class="work-title">CountLab</span>
+            <span class="work-summary">Counting drills, exact game solvers, and bankroll analysis</span>
+            <span class="work-meta mono">
+              <span class="work-year">2026</span>
+              <span class="work-stack">TypeScript, Next.js</span>
             </span>
+            <span class="chip chip--live work-status">Live</span>
+            <svg class="work-arrow work-arrow--go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-arrow-right"/></svg>
           </a>
         </div>
 
-        <div class="card">
-          <a href="https://github.com/Garrrrrrrr/Android-Social-Media-Mood-App" target="_blank" rel="noopener noreferrer" class="card-link">
-            <h3>Android Social Media Mood App</h3>
-            <p>Scalable Android app built in an Agile team with optimized database queries and async handling, improving efficiency by 74%.</p>
-            <div class="lang">
-              <span class="pill">Java</span>
-              <span class="pill">Firebase</span>
-              <span class="pill">Android Studio</span>
-            </div>
-          </a>
-          <a class="preview-trigger" href="gallery.html?project=android-mood" aria-label="View Android Mood App screenshots">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            <span class="preview-popup">
-              <img src="images/projects/android1.png" alt="Android Mood App screenshot 1">
-              <img src="images/projects/android2.png" alt="Android Mood App screenshot 2">
-              <img src="images/projects/android3.png" alt="Android Mood App screenshot 3">
-              <img src="images/projects/android4.png" alt="Android Mood App screenshot 4">
-              <img src="images/projects/android5.png" alt="Android Mood App screenshot 5">
+        <!-- 2. Gateway Training Tool -->
+        <div class="work__item">
+          <a class="work-row" href="/work/gateway-training/">
+            <span class="work-title">Gateway Training Tool</span>
+            <span class="work-summary">Training records for casino staff across three provinces</span>
+            <span class="work-meta mono">
+              <span class="work-year">2026</span>
+              <span class="work-stack">TypeScript, Supabase</span>
             </span>
+            <span class="chip chip--live work-status">Live</span>
+            <svg class="work-arrow work-arrow--go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-arrow-right"/></svg>
           </a>
         </div>
 
-        <div class="card">
-          <a href="https://github.com/Garrrrrrrr/Twitter-Backend-Clone" target="_blank" rel="noopener noreferrer" class="card-link">
-            <h3>Twitter Backend Clone</h3>
-            <p>Twitter backend clone implemented using Python and MongoDB</p>
-            <div class="lang">
-              <span class="pill">Python</span>
-              <span class="pill">MongoDB</span>
-            </div>
-          </a>
-        </div>
-
-        <div class="card">
-          <a href="https://github.com/Garrrrrrrr/Stock-Tracker-App" target="_blank" rel="noopener noreferrer" class="card-link">
-            <h3>Stock Tracker App</h3>
-            <p>Tracks financial disclosures and stock trades by prominent individuals with web scraping and a desktop interface</p>
-            <div class="lang">
-              <span class="pill">Python</span>
-              <span class="pill">Pandas</span>
-              <span class="pill">BeautifulSoup</span>
-              <span class="pill">Tkinter</span>
-            </div>
-          </a>
-          <a class="preview-trigger" href="gallery.html?project=stock" aria-label="View Stock Tracker screenshots">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            <span class="preview-popup">
-              <img src="images/projects/stock1.png" alt="Stock Tracker main view">
-              <img src="images/projects/stock2.png" alt="Stock Tracker filtering">
-              <img src="images/projects/stock3.png" alt="Stock Tracker chart">
-              <img src="images/projects/stock4.png" alt="Stock Tracker export">
-              <img src="images/projects/stock5.png" alt="Stock Tracker details">
+        <!-- 3. Neurocalm -->
+        <div class="work__item">
+          <a class="work-row" href="/work/neurocalm/">
+            <span class="work-title">Neurocalm</span>
+            <span class="work-summary">EEG relaxation system running on OpenBCI hardware</span>
+            <span class="work-meta mono">
+              <span class="work-year">2025 to 26</span>
+              <span class="work-stack">Python, React</span>
             </span>
+            <span class="chip work-status">Source</span>
+            <svg class="work-arrow work-arrow--go" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-arrow-right"/></svg>
           </a>
         </div>
 
-        <div class="card">
-          <a href="https://github.com/Garrrrrrrr/Ray-Tracing-Engine-in-C" target="_blank" rel="noopener noreferrer" class="card-link">
-            <h3>3D Rendering Engine</h3>
-            <p>A 3D rendering engine built from scratch in pure C with ray-sphere intersection, lighting calculations, and PPM image rendering.</p>
-            <div class="lang">
-              <span class="pill">C</span>
-            </div>
-          </a>
-          <a class="preview-trigger" href="gallery.html?project=3d-rendering" aria-label="View 3D Rendering Engine renders">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-            <span class="preview-popup">
-              <img src="images/projects/ppm1.png" alt="Ray traced sphere render">
-              <img src="images/projects/ppm2.png" alt="Ray traced lighting">
-              <img src="images/projects/ppm3.png" alt="Ray traced shadows">
-              <img src="images/projects/ppm4.png" alt="Ray traced reflections">
-              <img src="images/projects/ppm5.png" alt="Ray traced final scene">
+        <!-- 4. 3D Rendering Engine -->
+        <details class="work__item">
+          <summary class="work-row">
+            <span class="work-title">3D Rendering Engine</span>
+            <span class="work-summary">Ray tracer written from scratch in C</span>
+            <span class="work-meta mono">
+              <span class="work-year">2025</span>
+              <span class="work-stack">C</span>
             </span>
-          </a>
-        </div>
+            <span class="chip work-status">Source</span>
+            <svg class="work-arrow work-arrow--open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+          </summary>
+          <div class="work-detail">
+            <div class="work-detail__body">
+              <p>
+                Ray-sphere intersection, surface normals, diffuse and specular lighting,
+                and PPM output, with no graphics library involved. The renderer running
+                at the top of this page is a port of it to canvas, so the shading model
+                you are looking at is the one implemented here.
+              </p>
+            </div>
+            <div class="shot-strip">
+              <button class="shot" type="button" data-lightbox="ppm" data-caption="Five spheres with diffuse shading against a dark background">
+                <img src="/images/projects/ppm1.webp" width="786" height="599" loading="lazy" decoding="async" alt="Five spheres with diffuse shading against a dark background">
+              </button>
+              <button class="shot" type="button" data-lightbox="ppm" data-caption="A scene with a sky gradient and a ground plane, with shadows cast onto it">
+                <img src="/images/projects/ppm2.webp" width="640" height="477" loading="lazy" decoding="async" alt="A scene with a sky gradient and a ground plane, with shadows cast onto it">
+              </button>
+              <button class="shot" type="button" data-lightbox="ppm" data-caption="Spheres of differing radius sharing one light source">
+                <img src="/images/projects/ppm3.webp" width="638" height="480" loading="lazy" decoding="async" alt="Spheres of differing radius sharing one light source">
+              </button>
+              <button class="shot" type="button" data-lightbox="ppm" data-caption="Close range spheres, showing the falloff across a curved surface">
+                <img src="/images/projects/ppm4.webp" width="640" height="481" loading="lazy" decoding="async" alt="Close range spheres, showing the falloff across a curved surface">
+              </button>
+              <button class="shot" type="button" data-lightbox="ppm" data-caption="A composed multi-sphere scene, written out as a PPM file">
+                <img src="/images/projects/ppm5.webp" width="800" height="596" loading="lazy" decoding="async" alt="A composed multi-sphere scene, written out as a PPM file">
+              </button>
+            </div>
+            <div class="work-detail__links">
+              <a class="link mono" href="https://github.com/Garrrrrrrr/Ray-Tracing-Engine-in-C" target="_blank" rel="noopener noreferrer">
+                Source on GitHub
+                <svg class="link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-external"/></svg>
+              </a>
+            </div>
+          </div>
+        </details>
 
+        <!-- 5. Stock Tracker -->
+        <details class="work__item">
+          <summary class="work-row">
+            <span class="work-title">Stock Tracker</span>
+            <span class="work-summary">Scrapes and queries insider trading disclosures</span>
+            <span class="work-meta mono">
+              <span class="work-year">2025 to 26</span>
+              <span class="work-stack">Python, Pandas</span>
+            </span>
+            <span class="chip work-status">Source</span>
+            <svg class="work-arrow work-arrow--open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+          </summary>
+          <div class="work-detail">
+            <div class="work-detail__body">
+              <p>
+                Scrapes public financial disclosures for trades made by executives,
+                politicians and high net worth individuals, normalises them with Pandas,
+                and presents them in a Tkinter desktop interface with filtering and
+                per-person history.
+              </p>
+            </div>
+            <div class="shot-strip">
+              <button class="shot" type="button" data-lightbox="stock" data-caption="The toolbar: refresh, add a ticker, export to CSV, or query a single company">
+                <img src="/images/projects/stock1.webp" width="1236" height="122" loading="lazy" decoding="async" alt="The toolbar: refresh, add a ticker, export to CSV, or query a single company">
+              </button>
+              <button class="shot" type="button" data-lightbox="stock" data-caption="The general feed: every recent filing with the insider, their title, the trade type and the price">
+                <img src="/images/projects/stock2.webp" width="901" height="943" loading="lazy" decoding="async" alt="The general feed: every recent filing with the insider, their title, the trade type and the price">
+              </button>
+              <button class="shot" type="button" data-lightbox="stock" data-caption="A wider view of the same feed, sorted by submission date">
+                <img src="/images/projects/stock3.webp" width="1600" height="1221" loading="lazy" decoding="async" alt="A wider view of the same feed, sorted by submission date">
+              </button>
+              <button class="shot" type="button" data-lightbox="stock" data-caption="The per-ticker query: symbol, how many days back, and a result limit">
+                <img src="/images/projects/stock4.webp" width="1255" height="482" loading="lazy" decoding="async" alt="The per-ticker query: symbol, how many days back, and a result limit">
+              </button>
+              <button class="shot" type="button" data-lightbox="stock" data-caption="Results for a single ticker, with quantity sold alongside each insider and title">
+                <img src="/images/projects/stock5.webp" width="1223" height="1070" loading="lazy" decoding="async" alt="Results for a single ticker, with quantity sold alongside each insider and title">
+              </button>
+            </div>
+            <div class="work-detail__links">
+              <a class="link mono" href="https://github.com/Garrrrrrrr/Stock-Tracker-App" target="_blank" rel="noopener noreferrer">
+                Source on GitHub
+                <svg class="link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-external"/></svg>
+              </a>
+            </div>
+          </div>
+        </details>
+
+        <!-- 6. Android Mood App -->
+        <details class="work__item">
+          <summary class="work-row">
+            <span class="work-title">Android Mood App</span>
+            <span class="work-summary">Team-built social app, Agile term project</span>
+            <span class="work-meta mono">
+              <span class="work-year">2026</span>
+              <span class="work-stack">Java, Firebase</span>
+            </span>
+            <span class="chip work-status">Source</span>
+            <svg class="work-arrow work-arrow--open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+          </summary>
+          <div class="work-detail">
+            <div class="work-detail__body">
+              <p>
+                An Android app for posting your current mood in an Instagram-like feed,
+                built by a team of six across Agile sprints with Firebase for auth,
+                storage and the live feed. My work was on the data layer: batching the
+                query pattern behind the feed and moving image handling off the main
+                thread so scrolling stayed smooth on older devices.
+              </p>
+            </div>
+            <div class="shot-strip">
+              <button class="shot" type="button" data-lightbox="android" data-caption="The mood feed, with the emotion setting the card colour">
+                <img src="/images/projects/android1.webp" width="720" height="1600" loading="lazy" decoding="async" alt="The mood feed, with the emotion setting the card colour">
+              </button>
+              <button class="shot" type="button" data-lightbox="android" data-caption="The mood feed">
+                <img src="/images/projects/android2.webp" width="720" height="1600" loading="lazy" decoding="async" alt="The mood feed">
+              </button>
+              <button class="shot" type="button" data-lightbox="android" data-caption="A profile, with follower counts and bio">
+                <img src="/images/projects/android3.webp" width="720" height="1600" loading="lazy" decoding="async" alt="A profile, with follower counts and bio">
+              </button>
+              <button class="shot" type="button" data-lightbox="android" data-caption="A mood entry with an image attached">
+                <img src="/images/projects/android4.webp" width="720" height="1600" loading="lazy" decoding="async" alt="A mood entry with an image attached">
+              </button>
+              <button class="shot" type="button" data-lightbox="android" data-caption="Browsing and filtering the feed">
+                <img src="/images/projects/android5.webp" width="720" height="1600" loading="lazy" decoding="async" alt="Browsing and filtering the feed">
+              </button>
+            </div>
+            <div class="work-detail__links">
+              <a class="link mono" href="https://github.com/Garrrrrrrr/Android-Social-Media-Mood-App" target="_blank" rel="noopener noreferrer">
+                Source on GitHub
+                <svg class="link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-external"/></svg>
+              </a>
+            </div>
+          </div>
+        </details>
+
+        <!-- 7. Twitter Backend Clone -->
+        <details class="work__item">
+          <summary class="work-row">
+            <span class="work-title">Twitter Backend Clone</span>
+            <span class="work-summary">Core API surface reimplemented against MongoDB</span>
+            <span class="work-meta mono">
+              <span class="work-year">2025</span>
+              <span class="work-stack">Python, MongoDB</span>
+            </span>
+            <span class="chip work-status">Source</span>
+            <svg class="work-arrow work-arrow--open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-chevron-down"/></svg>
+          </summary>
+          <div class="work-detail">
+            <div class="work-detail__body">
+              <p>
+                Tweets, follows, search and the timeline query, implemented in Python
+                against MongoDB. The interesting part was the timeline: assembling a
+                feed from a follow graph without scanning every document, which is where
+                the indexing decisions actually start to matter.
+              </p>
+            </div>
+            <div class="work-detail__links">
+              <a class="link mono" href="https://github.com/Garrrrrrrr/Twitter-Backend-Clone" target="_blank" rel="noopener noreferrer">
+                Source on GitHub
+                <svg class="link__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-external"/></svg>
+              </a>
+            </div>
+          </div>
+        </details>
 
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- SECTION 3: Contact -->
-    <section id="contact" class="contact-section">
-      <h2>Contact</h2>
+  <!-- TOOLS ---------------------------------------------------------------- -->
+  <section class="section" id="tools">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="t-h2">Tools</h2>
+      </div>
 
-      <div class="group">
-        <div class="text">
-          If you have any questions or would like to work together, feel free to reach out to me! I am always open to new opportunities and collaborations.
+      <div class="tools">
+        <div class="reveal">
+          <p class="eyebrow tools__label">Languages</p>
+          <ul class="tag-list">
+            <li class="tag">TypeScript</li>
+            <li class="tag">Python</li>
+            <li class="tag">JavaScript</li>
+            <li class="tag">C</li>
+            <li class="tag">Java</li>
+            <li class="tag">SQL</li>
+            <li class="tag">PHP</li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <p class="eyebrow tools__label">Frameworks and runtime</p>
+          <ul class="tag-list">
+            <li class="tag">React</li>
+            <li class="tag">Next.js</li>
+            <li class="tag">Node.js</li>
+            <li class="tag">Express</li>
+            <li class="tag">Tailwind CSS</li>
+            <li class="tag">Pandas</li>
+            <li class="tag">NumPy</li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <p class="eyebrow tools__label">Infrastructure and data</p>
+          <ul class="tag-list">
+            <li class="tag">PostgreSQL</li>
+            <li class="tag">Supabase</li>
+            <li class="tag">Firebase</li>
+            <li class="tag">MongoDB</li>
+            <li class="tag">Docker</li>
+            <li class="tag">Git</li>
+            <li class="tag">AWS</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT ----------------------------------------------------------------- -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="t-h2">About</h2>
+      </div>
+
+      <div class="about__grid">
+        <div class="prose">
+          <p>
+            I gravitate toward problems where being roughly right is not good enough.
+            A renderer either produces the correct image or it does not. A counting
+            drill either deals a legal shoe or it quietly teaches you the wrong thing.
+            A training record either proves someone was signed off or it fails an audit.
+          </p>
+          <p>
+            Most of what I have built started as something I needed. I was training
+            dealers at Gateway and the sign-off process ran on spreadsheets, so I built
+            a tool to replace it. I wanted to understand how rendering actually works,
+            so I wrote a ray tracer in C instead of reading about one.
+          </p>
+          <p>
+            I am looking for a software role where correctness matters and I can work
+            close to the problem. If that sounds like your team, I would like to hear
+            about it.
+          </p>
         </div>
 
-        <form id="contactForm">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required>
+        <picture>
+          <source srcset="/images/cv/headshot-320.webp 320w, /images/cv/headshot-640.webp 640w"
+                  sizes="(min-width: 768px) 320px, 100vw" type="image/webp">
+          <img class="about__photo" src="/images/cv/headshot-640.jpg"
+               width="640" height="640" loading="lazy" decoding="async"
+               alt="Garrick Tse">
+        </picture>
+      </div>
+    </div>
+  </section>
 
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
+  <!-- CONTACT --------------------------------------------------------------- -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="t-h2">Contact</h2>
+      </div>
 
-          <label for="message">Message</label>
-          <textarea id="message" name="message" cols="30" rows="10" required></textarea>
+      <div class="contact__grid">
+        <div>
+          <p class="prose">
+            The fastest way to reach me is email. If you are hiring, a link to the role
+            and a line about what the team is building is plenty to start with.
+          </p>
 
-          <button type="submit">Send Message</button>
+          <div class="contact__routes">
+            <a class="contact__route" href="mailto:g.tse8888@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg>
+              Email
+              <span class="contact__route-val">g.tse8888@gmail.com</span>
+            </a>
+            <a class="contact__route" href="https://github.com/Garrrrrrrr" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-github"/></svg>
+              GitHub
+              <span class="contact__route-val">Garrrrrrrr</span>
+            </a>
+            <a class="contact__route" href="https://www.linkedin.com/in/garrick-tse-6a5746229/" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-linkedin"/></svg>
+              LinkedIn
+              <span class="contact__route-val">garrick-tse</span>
+            </a>
+          </div>
+        </div>
+
+        <form class="form" id="contact-form" novalidate>
+          <div class="field">
+            <label class="field__label" for="name">Name</label>
+            <input class="field__input" type="text" id="name" name="name" autocomplete="name"
+                   aria-describedby="name-error" required>
+            <p class="field__error" id="name-error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="email">Email</label>
+            <input class="field__input" type="email" id="email" name="email" autocomplete="email"
+                   aria-describedby="email-error" required>
+            <p class="field__error" id="email-error" role="alert"></p>
+          </div>
+
+          <div class="field">
+            <label class="field__label" for="message">Message</label>
+            <textarea class="field__input" id="message" name="message" rows="5"
+                      aria-describedby="message-error" required></textarea>
+            <p class="field__error" id="message-error" role="alert"></p>
+          </div>
+
+          <div class="field field--trap" aria-hidden="true">
+            <label for="company">Company</label>
+            <input type="text" id="company" name="company" tabindex="-1" autocomplete="off">
+          </div>
+
+          <button class="btn btn--primary form__submit" type="submit">Send message</button>
+          <p class="form__status" id="form-status" role="status" aria-live="polite"></p>
         </form>
       </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2026 Garrick Tse. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="https://github.com/Garrrrrrrr" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/garrick-tse-6a5746229/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="mailto:g.tse8888@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
-      </div>
     </div>
-  </footer>
+  </section>
 
-  <script src="assets/js/script.js"></script>
+</main>
+
+<footer class="footer">
+  <div class="container footer__inner">
+    <p class="mono footer__meta">
+      &copy; <span data-year>2026</span> Garrick Tse.
+      Hand-built, no framework.
+      <a href="https://github.com/Garrrrrrrr/website" target="_blank" rel="noopener noreferrer">Source</a>
+    </p>
+    <div class="footer__social">
+      <a class="icon-btn" href="https://github.com/Garrrrrrrr" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-github"/></svg>
+      </a>
+      <a class="icon-btn" href="https://www.linkedin.com/in/garrick-tse-6a5746229/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-linkedin"/></svg>
+      </a>
+      <a class="icon-btn" href="mailto:g.tse8888@gmail.com" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-mail"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Screenshot viewer" hidden>
+  <button class="icon-btn lightbox__close" type="button" aria-label="Close viewer">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-close"/></svg>
+  </button>
+  <button class="icon-btn lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous screenshot">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-arrow-left"/></svg>
+  </button>
+  <button class="icon-btn lightbox__nav lightbox__nav--next" type="button" aria-label="Next screenshot">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><use href="#i-arrow-right"/></svg>
+  </button>
+  <figure class="lightbox__figure">
+    <img class="lightbox__img" alt="">
+    <figcaption class="mono lightbox__caption"></figcaption>
+  </figure>
+</div>
+
+<script src="/assets/js/raytracer.js" defer></script>
+<script src="/assets/js/main.js" defer></script>
 </body>
 </html>

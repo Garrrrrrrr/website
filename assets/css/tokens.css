@@ -1,0 +1,238 @@
+/* ============================================================================
+   DESIGN TOKENS
+   garricktse.com
+
+   This file is the design system. Every value used anywhere else in the site
+   comes from here. If a component stylesheet contains a raw colour, spacing,
+   radius, duration or font size, that is a bug.
+
+   Contents
+     1. Typefaces
+     2. Colour, light
+     3. Colour, dark
+     4. Spacing scale, 4pt
+     5. Type ramp
+     6. Radius
+     7. Elevation
+     8. Motion
+     9. Layout
+   ========================================================================= */
+
+
+/* 1. TYPEFACES ------------------------------------------------------------ */
+
+/* Archivo. Variable, 400 to 700. Headings and UI. */
+@font-face {
+  font-family: 'Archivo';
+  src: url('../fonts/archivo.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Source Serif 4. Variable, 400 to 600, optical size 8 to 60. Reading text. */
+@font-face {
+  font-family: 'Source Serif 4';
+  src: url('../fonts/sourceserif.woff2') format('woff2');
+  font-weight: 400 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* IBM Plex Mono. Data and labels only, never prose. */
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('../fonts/plexmono-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IBM Plex Mono';
+  src: url('../fonts/plexmono-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+:root {
+  color-scheme: light dark;
+
+  /* 2. COLOUR, LIGHT ------------------------------------------------------ */
+
+  --paper:          #F4F4F1;   /* page ground                                */
+  --surface:        #FFFFFF;   /* cards, inputs, raised panels               */
+  --surface-sunken: #EAEAE6;   /* expanded rows, code, skeletons             */
+  --ink:            #16171A;   /* headings and primary text                  */
+  --ink-muted:      #5E6168;   /* metadata, captions, secondary text         */
+  --rule:           #DEDEDA;   /* hairlines and borders                      */
+
+  /* One accent. Deep pine. Carries hierarchy and state, never decoration. */
+  --accent:          #0E5C4A;
+  --accent-hover:    #0A4437;
+  --accent-wash:     rgba(14, 92, 74, 0.08);
+  --accent-contrast: #FFFFFF;  /* text sitting on --accent                   */
+
+  --selection: rgba(14, 92, 74, 0.16);
+
+  /* The headshot is shot on white. On the dark theme it is dimmed slightly
+     so it does not glare; on light it is left alone. */
+  --photo-filter: none;
+
+
+  /* 4. SPACING SCALE, 4pt ------------------------------------------------- */
+  /* No margin, padding or gap anywhere may use a value outside this scale. */
+
+  --s-1:  4px;
+  --s-2:  8px;
+  --s-3:  12px;
+  --s-4:  16px;
+  --s-5:  24px;
+  --s-6:  32px;
+  --s-7:  48px;
+  --s-8:  64px;
+  --s-9:  96px;
+  --s-10: 128px;
+
+
+  /* 5. TYPE RAMP ---------------------------------------------------------- */
+
+  --font-display: 'Archivo', 'Helvetica Neue', Arial, sans-serif;
+  --font-body:    'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --font-mono:    'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* The display step is the only fluid value in the system. Every other step
+     is fixed so vertical rhythm cannot drift between breakpoints. */
+  --t-display:  clamp(40px, 6vw, 68px);
+  --t-h1:       40px;
+  --t-h2:       28px;
+  --t-h3:       20px;
+  --t-body-lg:  19px;
+  --t-body:     16px;
+  --t-ui:       15px;
+  --t-meta:     13px;
+  --t-eyebrow:  12px;
+
+  --lh-display: 1.05;
+  --lh-h1:      1.15;
+  --lh-h2:      1.20;
+  --lh-h3:      1.30;
+  --lh-body:    1.60;
+  --lh-body-lg: 1.65;
+  --lh-ui:      1.45;
+  --lh-meta:    1.40;
+  --lh-eyebrow: 1.30;
+
+  --tr-display: -0.02em;
+  --tr-h1:      -0.015em;
+  --tr-h2:      -0.01em;
+  --tr-h3:      -0.005em;
+  --tr-meta:    0.02em;
+  --tr-eyebrow: 0.10em;
+
+
+  /* 6. RADIUS ------------------------------------------------------------- */
+  /* Two values, no exceptions. Everything that has a corner uses one of them. */
+
+  --r:    8px;   /* cards, buttons, inputs, images, canvas frame */
+  --r-sm: 4px;   /* chips, focus rings, progress bar             */
+
+
+  /* 7. ELEVATION ---------------------------------------------------------- */
+  /* Two steps. Neutral black at low alpha, never tinted. Hairlines do most
+     of the separation work; shadow is reserved for genuinely lifted surfaces. */
+
+  --shadow-1: 0 1px 2px rgba(16, 17, 20, 0.04),
+              0 1px 1px rgba(16, 17, 20, 0.03);
+  --shadow-2: 0 8px 24px rgba(16, 17, 20, 0.08),
+              0 2px 6px rgba(16, 17, 20, 0.04);
+
+
+  /* 8. MOTION ------------------------------------------------------------- */
+
+  --dur-1: 120ms;   /* hover, focus, colour                     */
+  --dur-2: 220ms;   /* disclosure, reveal, nav state            */
+  --ease-out:    cubic-bezier(0.2, 0, 0, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+
+  /* 9. LAYOUT ------------------------------------------------------------- */
+
+  --container: 1200px;
+  --gutter:    var(--s-5);   /* 24px, raised at wider breakpoints below */
+  --measure:       68ch;     /* maximum line length for reading text    */
+  --measure-wide:  76ch;     /* label/value strips, which run wider     */
+  --section-y: var(--s-9);   /* 96px, raised to 128px at 768px          */
+  --header-h:  64px;
+}
+
+
+/* 3. COLOUR, DARK ---------------------------------------------------------
+   Three states: no attribute follows the system, an explicit attribute wins
+   in both directions. Only the colour tokens are redefined; nothing else in
+   the system changes between themes. */
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper:          #101113;
+    --surface:        #17181B;
+    --surface-sunken: #1D1E22;
+    --ink:            #EDEEEF;
+    --ink-muted:      #9A9EA6;
+    --rule:           #2A2C31;
+
+    --accent:          #4FBFA0;
+    --accent-hover:    #6ED0B4;
+    --accent-wash:     rgba(79, 191, 160, 0.10);
+    --accent-contrast: #08201A;
+
+    --selection: rgba(79, 191, 160, 0.22);
+    --photo-filter: brightness(0.92) contrast(1.02);
+
+    --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.32),
+                0 1px 1px rgba(0, 0, 0, 0.24);
+    --shadow-2: 0 8px 24px rgba(0, 0, 0, 0.44),
+                0 2px 6px rgba(0, 0, 0, 0.30);
+  }
+}
+
+:root[data-theme="dark"] {
+  --paper:          #101113;
+  --surface:        #17181B;
+  --surface-sunken: #1D1E22;
+  --ink:            #EDEEEF;
+  --ink-muted:      #9A9EA6;
+  --rule:           #2A2C31;
+
+  --accent:          #4FBFA0;
+  --accent-hover:    #6ED0B4;
+  --accent-wash:     rgba(79, 191, 160, 0.10);
+  --accent-contrast: #08201A;
+
+  --selection: rgba(79, 191, 160, 0.22);
+  --photo-filter: brightness(0.92) contrast(1.02);
+
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.32),
+              0 1px 1px rgba(0, 0, 0, 0.24);
+  --shadow-2: 0 8px 24px rgba(0, 0, 0, 0.44),
+              0 2px 6px rgba(0, 0, 0, 0.30);
+}
+
+
+/* Breakpoint-scoped layout tokens. Both endpoints sit on the 4pt scale, so
+   clamp() is deliberately not used for section rhythm or gutters. */
+
+@media (min-width: 768px) {
+  :root {
+    --gutter:    var(--s-6);   /* 32px */
+    --section-y: var(--s-10);  /* 128px */
+    --header-h:  72px;
+  }
+}
+
+@media (min-width: 1280px) {
+  :root {
+    --gutter: var(--s-7);      /* 48px */
+  }
+}
